@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: HumanDemoPlayer</title>
+	<title>Class: ConsoleRenderer</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -38,8 +38,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./players/human_demo_player_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="players/human_demo_player.rb">players/human_demo_player.rb</a></li>
+						<li><a href="./lib/console_renderer_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/console_renderer.rb">lib/console_renderer.rb</a></li>
 					
 					</ul>
 				</div>
@@ -69,11 +69,13 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#method-i-name">#name</a></li>
+					<li><a href="#method-i-blank_line">#blank_line</a></li>
 					
-					<li><a href="#method-i-new_game">#new_game</a></li>
+					<li><a href="#method-i-clear">#clear</a></li>
 					
-					<li><a href="#method-i-take_turn">#take_turn</a></li>
+					<li><a href="#method-i-output">#output</a></li>
+					
+					<li><a href="#method-i-render_players">#render_players</a></li>
 					
 				</ul>
 			</div>
@@ -132,17 +134,30 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">HumanDemoPlayer</h1>
+		<h1 class="class">ConsoleRenderer</h1>
 
 		<div id="description">
 			<p>
-Demo player: Allows a human to enter the guess per turn. Please note that
-the class name ends with the word &#8220;Player&#8221; to enable loading.
+Renders output to the console
 </p>
 
 		</div>
 
 		<!-- Constants -->
+		
+		<div id="constants-list" class="section">
+			<h3 class="section-header">Constants</h3>
+			<dl>
+			
+				<dt><a name="WIN_OS">WIN_OS</a></dt>
+				
+				<dd class="description"><p>
+Are we running on a Windows machine?
+</p></dd>
+				
+			
+			</dl>
+		</div>
 		
 
 		<!-- Attributes -->
@@ -154,12 +169,12 @@ the class name ends with the word &#8220;Player&#8221; to enable loading.
 			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="name-method" class="method-detail ">
-				<a name="method-i-name"></a>
+			<div id="blank-line-method" class="method-detail ">
+				<a name="method-i-blank_line"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">name</span><span
+					<span class="method-name">blank_line</span><span
 						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
@@ -168,18 +183,18 @@ the class name ends with the word &#8220;Player&#8221; to enable loading.
 				<div class="method-description">
 					
 					<p>
-Returns this players name.
+Outputs a blank line to the console
 </p>
 					
 
 					
 					<div class="method-source-code"
-						id="name-source">
+						id="blank-line-source">
 <pre>
-   <span class="ruby-comment cmt"># File players/human_demo_player.rb, line 4</span>
-4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
-5:     <span class="ruby-value str">&quot;Human Demo Player&quot;</span>
-6:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 19</span>
+19:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">blank_line</span>
+20:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;&quot;</span>
+21:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -190,13 +205,13 @@ Returns this players name.
 			</div>
 
 		
-			<div id="new-game-method" class="method-detail ">
-				<a name="method-i-new_game"></a>
+			<div id="clear-method" class="method-detail ">
+				<a name="method-i-clear"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">new_game</span><span
-						class="method-args">(dictionary)</span>
+					<span class="method-name">clear</span><span
+						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -204,54 +219,95 @@ Returns this players name.
 				<div class="method-description">
 					
 					<p>
-Pepares for a new game (no action required for this player).
+Clears the terminal (OS safe)
 </p>
 					
 
 					
 					<div class="method-source-code"
-						id="new-game-source">
+						id="clear-source">
 <pre>
-    <span class="ruby-comment cmt"># File players/human_demo_player.rb, line 9</span>
- 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_game</span>(<span class="ruby-identifier">dictionary</span>)
-10:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-
-				
-			</div>
-
-		
-			<div id="take-turn-method" class="method-detail ">
-				<a name="method-i-take_turn"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">take_turn</span><span
-						class="method-args">(pattern)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-For each turn, show a prompt to the user and return what was typed.
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="take-turn-source">
-<pre>
-    <span class="ruby-comment cmt"># File players/human_demo_player.rb, line 13</span>
-13:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">take_turn</span>(<span class="ruby-identifier">pattern</span>)    
-14:     <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Human player, please enter your guess:&quot;</span>
-15:     <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp!</span>
+    <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 14</span>
+14:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">clear</span>
+15:     <span class="ruby-constant">WIN_OS</span> <span class="ruby-operator">?</span> <span class="ruby-identifier">system</span>(<span class="ruby-value str">&quot;cls&quot;</span>) <span class="ruby-operator">:</span> <span class="ruby-identifier">system</span>(<span class="ruby-value str">&quot;clear&quot;</span>)
 16:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="output-method" class="method-detail ">
+				<a name="method-i-output"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">output</span><span
+						class="method-args">(text)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Standard puts functionality for adhoc text output
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="output-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 9</span>
+ 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">output</span>(<span class="ruby-identifier">text</span>)
+10:     <span class="ruby-identifier">puts</span> <span class="ruby-identifier">text</span>
+11:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="render-players-method" class="method-detail ">
+				<a name="method-i-render_players"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">render_players</span><span
+						class="method-args">(players)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+From a list of loaded player classes, display their names
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="render-players-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 24</span>
+24:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render_players</span>(<span class="ruby-identifier">players</span>)
+25:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;Loaded Players&quot;</span>
+26:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;==============&quot;</span>
+27:     
+28:     <span class="ruby-identifier">players</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">player</span>, <span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+29:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;#{x + 1}: #{player.new.name}&quot;</span>
+30:     <span class="ruby-keyword kw">end</span>
+31:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
