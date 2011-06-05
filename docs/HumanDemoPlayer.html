@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: DictionaryLoader</title>
+	<title>Class: HumanDemoPlayer</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -38,8 +38,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./lib/dictionary_loader_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="lib/dictionary_loader.rb">lib/dictionary_loader.rb</a></li>
+						<li><a href="./players/human_demo_player_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="players/human_demo_player.rb">players/human_demo_player.rb</a></li>
 					
 					</ul>
 				</div>
@@ -69,7 +69,11 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#method-i-load">#load</a></li>
+					<li><a href="#method-i-name">#name</a></li>
+					
+					<li><a href="#method-i-new_game">#new_game</a></li>
+					
+					<li><a href="#method-i-take_turn">#take_turn</a></li>
 					
 				</ul>
 			</div>
@@ -126,12 +130,12 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">DictionaryLoader</h1>
+		<h1 class="class">HumanDemoPlayer</h1>
 
 		<div id="description">
 			<p>
-Loads the word list from a text file. The file should contain a single word
-per line.
+Demo player: Allows a human to enter the guess per turn. Please note that
+the class name ends with the word &#8220;Player&#8221; to enable loading.
 </p>
 
 		</div>
@@ -148,13 +152,13 @@ per line.
 			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="load-method" class="method-detail ">
-				<a name="method-i-load"></a>
+			<div id="name-method" class="method-detail ">
+				<a name="method-i-name"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">load</span><span
-						class="method-args">(file_path)</span>
+					<span class="method-name">name</span><span
+						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -162,23 +166,90 @@ per line.
 				<div class="method-description">
 					
 					<p>
-Loads the specified text file and creates an array containing each word.
-The word list is sorted and made lowercase
+Returns this players name.
 </p>
 					
 
 					
 					<div class="method-source-code"
-						id="load-source">
+						id="name-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/dictionary_loader.rb, line 4</span>
- 4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">load</span>(<span class="ruby-identifier">file_path</span>)
- 5:     <span class="ruby-identifier">file</span> = <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span> <span class="ruby-identifier">file_path</span>, <span class="ruby-value str">&quot;r&quot;</span>
- 6:     <span class="ruby-identifier">words</span> = <span class="ruby-identifier">file</span>.<span class="ruby-identifier">readlines</span>.<span class="ruby-identifier">map</span>(&amp;<span class="ruby-value">:chomp</span>)
- 7:     <span class="ruby-identifier">file</span>.<span class="ruby-identifier">close</span>
- 8:     
- 9:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">words</span>.<span class="ruby-identifier">map</span> { <span class="ruby-operator">|</span><span class="ruby-identifier">word</span><span class="ruby-operator">|</span> <span class="ruby-identifier">word</span>.<span class="ruby-identifier">downcase</span> }.<span class="ruby-identifier">sort</span>
+   <span class="ruby-comment cmt"># File players/human_demo_player.rb, line 4</span>
+4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
+5:     <span class="ruby-value str">&quot;Human Demo Player&quot;</span>
+6:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="new-game-method" class="method-detail ">
+				<a name="method-i-new_game"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new_game</span><span
+						class="method-args">(dictionary)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Pepares for a new game (no action required for this player).
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-game-source">
+<pre>
+    <span class="ruby-comment cmt"># File players/human_demo_player.rb, line 9</span>
+ 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_game</span>(<span class="ruby-identifier">dictionary</span>)
 10:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="take-turn-method" class="method-detail ">
+				<a name="method-i-take_turn"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">take_turn</span><span
+						class="method-args">(pattern)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+For each turn, show a prompt to the user and return what was typed.
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="take-turn-source">
+<pre>
+    <span class="ruby-comment cmt"># File players/human_demo_player.rb, line 13</span>
+13:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">take_turn</span>(<span class="ruby-identifier">pattern</span>)    
+14:     <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Human player, please enter your guess:&quot;</span>
+15:     <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp!</span>
+16:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
