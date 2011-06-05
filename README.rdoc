@@ -1,0 +1,28 @@
+= Surrey Rubyists Coding Competition: Hangman
+
+== Player Class
+
+All you need to do is create a single file and implements a hangman player with the below methods. 
+
+Your class name must end with "Player" for it to be loaded by the game framework! Please try to make your class and file name unique in some way (with your team name for example).
+
+  # ./players/my_awesome_super_duper_hangman_player.rb
+  class MyAwesomeSuperDuperHangmanPlayer
+    def name
+      # Return the name of your player
+    end
+
+    def new_game(dictionary)
+      # A new game has started, do any clean up from a previous game. 
+      # A word list is passed in as a string array that was used to generate the phrase to guess
+    end
+
+    def take_turn(pattern)
+      # It's your turn. Return a guess which can either be a letter, word or whole phrase.
+      # The state of your pattern is passed in the format s_rr__/r____s_s (underscore: missing letter, forward slash: space, letter: correctly placed)
+    end
+  end
+
+== Rules
+
+TBC
