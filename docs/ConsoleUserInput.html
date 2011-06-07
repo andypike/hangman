@@ -1,0 +1,390 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
+
+	<title>Class: ConsoleUserInput</title>
+
+	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
+
+	<script src="./js/jquery.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/thickbox-compressed.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/quicksearch.js" type="text/javascript"
+		charset="utf-8"></script>
+	<script src="./js/darkfish.js" type="text/javascript"
+		charset="utf-8"></script>
+
+</head>
+<body class="class">
+
+	<div id="metadata">
+		<div id="home-metadata">
+			<div id="home-section" class="section">
+        <h3 class="section-header">
+          <a href="./index.html">Home</a>
+          <a href="./index.html#classes">Classes</a>
+          <a href="./index.html#methods">Methods</a>
+        </h3>
+			</div>
+		</div>
+
+		<div id="file-metadata">
+			<div id="file-list-section" class="section">
+				<h3 class="section-header">In Files</h3>
+				<div class="section-body">
+					<ul>
+					
+						<li><a href="./lib/console_user_input_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/console_user_input.rb">lib/console_user_input.rb</a></li>
+					
+					</ul>
+				</div>
+			</div>
+
+			
+		</div>
+
+		<div id="class-metadata">
+
+			<!-- Parent Class -->
+			
+			<div id="parent-class-section" class="section">
+				<h3 class="section-header">Parent</h3>
+				
+				<p class="link">Object</p>
+				
+			</div>
+			
+
+			<!-- Namespace Contents -->
+			
+
+			<!-- Method Quickref -->
+			
+			<div id="method-list-section" class="section">
+				<h3 class="section-header">Methods</h3>
+				<ul class="link-list">
+					
+					<li><a href="#method-c-new">::new</a></li>
+					
+					<li><a href="#method-i-read_number">#read_number</a></li>
+					
+					<li><a href="#method-i-read_number_with_validation">#read_number_with_validation</a></li>
+					
+					<li><a href="#method-i-select_num_of_words">#select_num_of_words</a></li>
+					
+					<li><a href="#method-i-select_players">#select_players</a></li>
+					
+				</ul>
+			</div>
+			
+
+			<!-- Included Modules -->
+			
+		</div>
+
+		<div id="project-metadata">
+			
+			
+			<div id="fileindex-section" class="section project-section">
+				<h3 class="section-header">Files</h3>
+				<ul>
+				
+					<li class="file"><a href="./README_rdoc.html">README.rdoc</a></li>
+				
+				</ul>
+			</div>
+			
+
+			<div id="classindex-section" class="section project-section">
+				<h3 class="section-header">Class Index
+					<span class="search-toggle"><img src="./images/find.png"
+						height="16" width="16" alt="[+]"
+						title="show/hide quicksearch" /></span></h3>
+				<form action="#" method="get" accept-charset="utf-8" class="initially-hidden">
+				<fieldset>
+					<legend>Quicksearch</legend>
+					<input type="text" name="quicksearch" value=""
+						class="quicksearch-field" />
+				</fieldset>
+				</form>
+
+				<ul class="link-list">
+				
+					<li><a href="./ConsoleRenderer.html">ConsoleRenderer</a></li>
+				
+					<li><a href="./ConsoleUserInput.html">ConsoleUserInput</a></li>
+				
+					<li><a href="./DictionaryLoader.html">DictionaryLoader</a></li>
+				
+					<li><a href="./Hangman.html">Hangman</a></li>
+				
+					<li><a href="./HumanDemoPlayer.html">HumanDemoPlayer</a></li>
+				
+					<li><a href="./PlayerLoader.html">PlayerLoader</a></li>
+				
+					<li><a href="./StupidDemoPlayer.html">StupidDemoPlayer</a></li>
+				
+				</ul>
+				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
+			</div>
+
+			
+		</div>
+	</div>
+
+	<div id="documentation">
+		<h1 class="class">ConsoleUserInput</h1>
+
+		<div id="description">
+			<p>
+A class for handling all user input
+</p>
+
+		</div>
+
+		<!-- Constants -->
+		
+
+		<!-- Attributes -->
+		
+
+		<!-- Methods -->
+		
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
+
+		
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">new</span><span
+						class="method-args">(renderer)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Initializes the class passing a renderer for user prompts
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="new-source">
+<pre>
+   <span class="ruby-comment cmt"># File lib/console_user_input.rb, line 4</span>
+4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">renderer</span>)
+5:     <span class="ruby-ivar">@renderer</span> = <span class="ruby-identifier">renderer</span>
+6:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
+
+		
+			<div id="read-number-method" class="method-detail ">
+				<a name="method-i-read_number"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_number</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Reads a number from the console
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="read-number-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/console_user_input.rb, line 9</span>
+ 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_number</span>
+10:     <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp</span>.<span class="ruby-identifier">to_i</span>
+11:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="select-num-of-words-method" class="method-detail ">
+				<a name="method-i-select_num_of_words"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">select_num_of_words</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Allows the user to select the number of words per phrase
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="select-num-of-words-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/console_user_input.rb, line 27</span>
+27:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select_num_of_words</span>
+28:     <span class="ruby-ivar">@renderer</span>.<span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;Please the number of words per phrase:&quot;</span>
+29:     <span class="ruby-identifier">read_number_with_validation</span>(<span class="ruby-value str">&quot;You must enter a valid number of words (1 or more), please try again:&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">num</span><span class="ruby-operator">|</span> <span class="ruby-identifier">num</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> }
+30:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="select-players-method" class="method-detail ">
+				<a name="method-i-select_players"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">select_players</span><span
+						class="method-args">(num_of_players, players)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Allows the user to select the specified number of players from the list of
+loaded players
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="select-players-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/console_user_input.rb, line 14</span>
+14:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">select_players</span>(<span class="ruby-identifier">num_of_players</span>, <span class="ruby-identifier">players</span>)
+15:     <span class="ruby-identifier">selected</span> = []
+16:     <span class="ruby-identifier">num_of_players</span>.<span class="ruby-identifier">times</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">i</span><span class="ruby-operator">|</span>
+17:       <span class="ruby-ivar">@renderer</span>.<span class="ruby-identifier">output</span> <span class="ruby-node">&quot;Please select player #{i + 1}:&quot;</span>
+18:       
+19:       <span class="ruby-identifier">player_number</span> = <span class="ruby-identifier">read_number_with_validation</span>(<span class="ruby-value str">&quot;You must enter a valid player number, please try again:&quot;</span>) { <span class="ruby-operator">|</span><span class="ruby-identifier">num</span><span class="ruby-operator">|</span> <span class="ruby-identifier">num</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">0</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">num</span> <span class="ruby-operator">&lt;=</span> <span class="ruby-identifier">players</span>.<span class="ruby-identifier">size</span> }
+20:       
+21:       <span class="ruby-identifier">selected</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">players</span>[<span class="ruby-identifier">player_number</span> <span class="ruby-operator">-</span> <span class="ruby-value">1</span>].<span class="ruby-identifier">new</span>
+22:     <span class="ruby-keyword kw">end</span>
+23:     <span class="ruby-identifier">selected</span>
+24:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="read-number-with-validation-method" class="method-detail ">
+				<a name="method-i-read_number_with_validation"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">read_number_with_validation</span><span
+						class="method-args">(message, &validation)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Helper to enable reading numbers from the console and showing an error
+message if the number  fails validation. Continues to loop, asking the user
+to try again until a valid input is entered
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="read-number-with-validation-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/console_user_input.rb, line 36</span>
+36:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">read_number_with_validation</span>(<span class="ruby-identifier">message</span>, &amp;<span class="ruby-identifier">validation</span>)    
+37:     <span class="ruby-keyword kw">begin</span>
+38:       <span class="ruby-identifier">num</span> = <span class="ruby-identifier">read_number</span>
+39:       <span class="ruby-ivar">@renderer</span>.<span class="ruby-identifier">output</span> <span class="ruby-identifier">message</span> <span class="ruby-keyword kw">unless</span> <span class="ruby-identifier">validation</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">num</span>)
+40:     <span class="ruby-keyword kw">end</span> <span class="ruby-keyword kw">while</span> <span class="ruby-identifier">validation</span>.<span class="ruby-identifier">call</span>(<span class="ruby-identifier">num</span>) <span class="ruby-operator">==</span> <span class="ruby-keyword kw">false</span>
+41:     <span class="ruby-identifier">num</span>
+42:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+		</div>
+	
+
+	</div>
+
+
+	<div id="rdoc-debugging-section-dump" class="debugging-section">
+	
+		<p>Disabled; run with --debug to generate this.</p>
+	
+	</div>
+
+	<div id="validator-badges">
+		<p><small><a href="http://validator.w3.org/check/referer">[Validate]</a></small></p>
+		<p><small>Generated with the <a href="http://deveiate.org/projects/Darkfish-Rdoc/">Darkfish
+			Rdoc Generator</a> 1.1.6</small>.</p>
+	</div>
+
+</body>
+</html>
+

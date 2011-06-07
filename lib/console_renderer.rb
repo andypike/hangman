@@ -20,13 +20,37 @@ class ConsoleRenderer
     output ""
   end
   
+  # Outputs the main welcome message
+  def welcome
+    clear
+    output "Welcome to Hangman"
+    output "=================="
+    blank_line
+  end
+  
   # From a list of loaded player classes, display their names
-  def render_players(players)
+  def players_list(players)
     output "Loaded Players"
     output "=============="
     
     players.each_with_index do |player, x|
       output "#{x + 1}: #{player.new.name}"
     end
+    output "* No players loaded :o(" if players.empty?
+    
+    blank_line
+  end
+  
+  # Display a list of errors while loading players
+  def errors(errors)
+    output "Errors Loading Players"
+    output "======================"
+    
+    errors.each do |error|
+      output "* #{error}"
+    end
+    output "* No errors to report :o)" if errors.empty?
+    
+    blank_line
   end
 end

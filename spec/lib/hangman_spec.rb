@@ -7,24 +7,22 @@ describe "Hangman" do
       @renderer = double("Renderer")
       @dictionary_loader = double("DictionaryLoader")
       @player_loader = double("PlayerLoader")
+      @user_input = double("ConsoleUserInput")
 
-      @renderer.stub(:output)
-      @renderer.stub(:render_players)
-      @renderer.stub(:clear)
-      @renderer.stub(:blank_line)
+      @renderer.stub(:welcome)
+      @renderer.stub(:errors)
+      @renderer.stub(:players_list)
       @dictionary_loader.stub(:load){ %w{apple bear cat} }
       @player_loader.stub(:load)
+      @player_loader.stub(:errors)
+      @user_input.stub(:select_players)
+      @user_input.stub(:select_num_of_words)
       
-      @hangman = Hangman.new(@renderer, @dictionary_loader, @player_loader)      
-    end
-    
-    it "should clear the screen" do
-      @renderer.should_receive(:clear)
-      @hangman.start      
+      @hangman = Hangman.new(@renderer, @dictionary_loader, @player_loader, @user_input)      
     end
     
     it "should output a welcome message" do
-      @renderer.should_receive(:output).with("Welcome to Hangman")
+      @renderer.should_receive(:welcome)
       @hangman.start 
     end
     
@@ -41,7 +39,26 @@ describe "Hangman" do
     it "should render the list of loaded players" do
       players = []
       @player_loader.stub(:load) { players }
-      @renderer.should_receive(:render_players).with(players)
+      @renderer.should_receive(:players_list).with(players)
+      @hangman.start
+    end
+    
+    it "should render the list of errors while trying to load players" do
+      errors = []
+      @player_loader.stub(:errors) { errors }
+      @renderer.should_receive(:errors).with(errors)
+      @hangman.start
+    end
+    
+    it "should allow the user to select 2 players" do
+      players = []
+      @player_loader.stub(:load) { players }
+      @user_input.should_receive(:select_players).with(2, players)
+      @hangman.start
+    end
+    
+    it "should allow the user to select the number of words per phrase" do
+      @user_input.should_receive(:select_num_of_words)
       @hangman.start
     end
   end

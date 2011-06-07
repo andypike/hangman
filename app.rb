@@ -1,4 +1,6 @@
 Dir["./lib/*.rb"].each { |file| require file }
 
-hangman = Hangman.new(ConsoleRenderer.new, DictionaryLoader.new, PlayerLoader.new)
+console_renderer = ConsoleRenderer.new
+user_input = ConsoleUserInput.new(console_renderer)
+hangman = Hangman.new(console_renderer, DictionaryLoader.new, PlayerLoader.new, user_input)
 hangman.start

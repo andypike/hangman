@@ -73,9 +73,13 @@
 					
 					<li><a href="#method-i-clear">#clear</a></li>
 					
+					<li><a href="#method-i-errors">#errors</a></li>
+					
 					<li><a href="#method-i-output">#output</a></li>
 					
-					<li><a href="#method-i-render_players">#render_players</a></li>
+					<li><a href="#method-i-players_list">#players_list</a></li>
+					
+					<li><a href="#method-i-welcome">#welcome</a></li>
 					
 				</ul>
 			</div>
@@ -114,6 +118,8 @@
 				<ul class="link-list">
 				
 					<li><a href="./ConsoleRenderer.html">ConsoleRenderer</a></li>
+				
+					<li><a href="./ConsoleUserInput.html">ConsoleUserInput</a></li>
 				
 					<li><a href="./DictionaryLoader.html">DictionaryLoader</a></li>
 				
@@ -241,6 +247,50 @@ Clears the terminal (OS safe)
 			</div>
 
 		
+			<div id="errors-method" class="method-detail ">
+				<a name="method-i-errors"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">errors</span><span
+						class="method-args">(errors)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Display a list of errors while loading players
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="errors-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 45</span>
+45:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">errors</span>(<span class="ruby-identifier">errors</span>)
+46:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;Errors Loading Players&quot;</span>
+47:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;======================&quot;</span>
+48:     
+49:     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">error</span><span class="ruby-operator">|</span>
+50:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;* #{error}&quot;</span>
+51:     <span class="ruby-keyword kw">end</span>
+52:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;* No errors to report :o)&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">empty?</span>
+53:     
+54:     <span class="ruby-identifier">blank_line</span>
+55:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
 			<div id="output-method" class="method-detail ">
 				<a name="method-i-output"></a>
 
@@ -277,12 +327,12 @@ Standard puts functionality for adhoc text output
 			</div>
 
 		
-			<div id="render-players-method" class="method-detail ">
-				<a name="method-i-render_players"></a>
+			<div id="players-list-method" class="method-detail ">
+				<a name="method-i-players_list"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">render_players</span><span
+					<span class="method-name">players_list</span><span
 						class="method-args">(players)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
@@ -297,17 +347,59 @@ From a list of loaded player classes, display their names
 
 					
 					<div class="method-source-code"
-						id="render-players-source">
+						id="players-list-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 32</span>
+32:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">players_list</span>(<span class="ruby-identifier">players</span>)
+33:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;Loaded Players&quot;</span>
+34:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;==============&quot;</span>
+35:     
+36:     <span class="ruby-identifier">players</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">player</span>, <span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+37:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;#{x + 1}: #{player.new.name}&quot;</span>
+38:     <span class="ruby-keyword kw">end</span>
+39:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;* No players loaded :o(&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">players</span>.<span class="ruby-identifier">empty?</span>
+40:     
+41:     <span class="ruby-identifier">blank_line</span>
+42:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="welcome-method" class="method-detail ">
+				<a name="method-i-welcome"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">welcome</span><span
+						class="method-args">()</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Outputs the main welcome message
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="welcome-source">
 <pre>
     <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 24</span>
-24:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">render_players</span>(<span class="ruby-identifier">players</span>)
-25:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;Loaded Players&quot;</span>
-26:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;==============&quot;</span>
-27:     
-28:     <span class="ruby-identifier">players</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">player</span>, <span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
-29:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;#{x + 1}: #{player.new.name}&quot;</span>
-30:     <span class="ruby-keyword kw">end</span>
-31:   <span class="ruby-keyword kw">end</span></pre>
+24:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">welcome</span>
+25:     <span class="ruby-identifier">clear</span>
+26:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;Welcome to Hangman&quot;</span>
+27:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;==================&quot;</span>
+28:     <span class="ruby-identifier">blank_line</span>
+29:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
