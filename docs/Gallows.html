@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: StupidDemoPlayer</title>
+	<title>Class: Gallows</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -38,8 +38,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./players/stupid_demo_player_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="players/stupid_demo_player.rb">players/stupid_demo_player.rb</a></li>
+						<li><a href="./lib/gallows_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/gallows.rb">lib/gallows.rb</a></li>
 					
 					</ul>
 				</div>
@@ -69,11 +69,7 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#method-i-name">#name</a></li>
-					
-					<li><a href="#method-i-new_game">#new_game</a></li>
-					
-					<li><a href="#method-i-take_turn">#take_turn</a></li>
+					<li><a href="#method-c-stages">::stages</a></li>
 					
 				</ul>
 			</div>
@@ -140,12 +136,11 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">StupidDemoPlayer</h1>
+		<h1 class="class">Gallows</h1>
 
 		<div id="description">
 			<p>
-Demo player: A pretty stupid player, just randomly returns a letter each
-turn. Doesn&#8217;t guess the same letter twice in the same game.
+Holds the various stages of the gallows to be drawn
 </p>
 
 		</div>
@@ -158,16 +153,16 @@ turn. Doesn&#8217;t guess the same letter twice in the same game.
 
 		<!-- Methods -->
 		
-		<div id="public-instance-method-details" class="method-section section">
-			<h3 class="section-header">Public Instance Methods</h3>
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
 
 		
-			<div id="name-method" class="method-detail ">
-				<a name="method-i-name"></a>
+			<div id="stages-method" class="method-detail ">
+				<a name="method-c-stages"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">name</span><span
+					<span class="method-name">stages</span><span
 						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
@@ -176,94 +171,116 @@ turn. Doesn&#8217;t guess the same letter twice in the same game.
 				<div class="method-description">
 					
 					<p>
-Returns this players name.
+Returns the array of strings that represent the stages of the gallows
+construction
 </p>
 					
 
 					
 					<div class="method-source-code"
-						id="name-source">
+						id="stages-source">
 <pre>
-   <span class="ruby-comment cmt"># File players/stupid_demo_player.rb, line 4</span>
-4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
-5:     <span class="ruby-value str">&quot;Stupid Demo Player&quot;</span>
-6:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-
-				
-			</div>
-
-		
-			<div id="new-game-method" class="method-detail ">
-				<a name="method-i-new_game"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">new_game</span><span
-						class="method-args">(dictionary)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Prepares for a new game. Creates an array of letters that can be used to
-guess.
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="new-game-source">
-<pre>
-    <span class="ruby-comment cmt"># File players/stupid_demo_player.rb, line 9</span>
- 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_game</span>(<span class="ruby-identifier">dictionary</span>)
-10:     <span class="ruby-ivar">@dictionary</span> = <span class="ruby-identifier">dictionary</span>
-11:     <span class="ruby-ivar">@letters</span> = (<span class="ruby-value str">'a'</span><span class="ruby-operator">..</span><span class="ruby-value str">'z'</span>).<span class="ruby-identifier">to_a</span>
-12:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-
-				
-			</div>
-
-		
-			<div id="take-turn-method" class="method-detail ">
-				<a name="method-i-take_turn"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">take_turn</span><span
-						class="method-args">(pattern)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-For each turn, randomly select a letter from the remaining list, remove
-this letter from the array and return it.
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="take-turn-source">
-<pre>
-    <span class="ruby-comment cmt"># File players/stupid_demo_player.rb, line 15</span>
-15:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">take_turn</span>(<span class="ruby-identifier">pattern</span>)    
-16:     <span class="ruby-identifier">i</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@letters</span>.<span class="ruby-identifier">count</span>)
-17:     <span class="ruby-ivar">@letters</span>.<span class="ruby-identifier">delete_at</span>(<span class="ruby-identifier">i</span>) <span class="ruby-comment cmt"># Letter at index i is returned</span>
-18:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File lib/gallows.rb, line 4</span>
+  4:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">stages</span>
+  5:     [
+  6: <span class="ruby-value str">&quot;  
+  7: 
+  8: 
+  9: 
+ 10: 
+ 11: 
+ 12: 
+ 13: 
+ 14: &quot;</span>,
+ 15: <span class="ruby-value str">&quot;  
+ 16:    
+ 17:    
+ 18:    
+ 19:    
+ 20:    
+ 21:    
+ 22: _______&quot;</span>,
+ 23: <span class="ruby-value str">&quot;
+ 24:    |
+ 25:    |
+ 26:    |
+ 27:    |
+ 28:    |
+ 29:    |
+ 30: ___|___&quot;</span>,
+ 31: <span class="ruby-value str">&quot;   _______
+ 32:    |
+ 33:    |
+ 34:    |
+ 35:    |
+ 36:    |
+ 37:    |
+ 38: ___|___&quot;</span>,
+ 39: <span class="ruby-value str">&quot;   _______
+ 40:    |/
+ 41:    |
+ 42:    |
+ 43:    |
+ 44:    |
+ 45:    |
+ 46: ___|___&quot;</span>,
+ 47: <span class="ruby-value str">&quot;   _______
+ 48:    |/     |
+ 49:    |
+ 50:    |
+ 51:    |
+ 52:    |
+ 53:    |
+ 54: ___|___&quot;</span>,
+ 55: <span class="ruby-value str">&quot;   _______
+ 56:    |/     |
+ 57:    |     (_)
+ 58:    |
+ 59:    |
+ 60:    |
+ 61:    |
+ 62: ___|___&quot;</span>,
+ 63: <span class="ruby-value str">&quot;   _______
+ 64:    |/     |
+ 65:    |     (_)
+ 66:    |      |  
+ 67:    |      |
+ 68:    |
+ 69:    |
+ 70: ___|___&quot;</span>,
+ 71: <span class="ruby-value str">&quot;   _______
+ 72:    |/     |
+ 73:    |     (_)
+ 74:    |    --|
+ 75:    |      |
+ 76:    |    
+ 77:    |
+ 78: ___|___&quot;</span>,
+ 79: <span class="ruby-value str">&quot;   _______
+ 80:    |/     |
+ 81:    |     (_)
+ 82:    |    --|--
+ 83:    |      |
+ 84:    |
+ 85:    |
+ 86: ___|___&quot;</span>,
+ 87: <span class="ruby-value str">&quot;   _______
+ 88:    |/     |
+ 89:    |     (_)
+ 90:    |    --|--
+ 91:    |      |
+ 92:    |     /
+ 93:    |
+ 94: ___|___&quot;</span>,
+ 95: <span class="ruby-value str">&quot;   _______
+ 96:    |/     |
+ 97:    |     (_)
+ 98:    |    --|--
+ 99:    |      |
+100:    |     / \\
+101:    |
+102: ___|___&quot;</span>]
+103:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

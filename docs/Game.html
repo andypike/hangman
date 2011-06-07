@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: StupidDemoPlayer</title>
+	<title>Class: Game</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -38,8 +38,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./players/stupid_demo_player_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="players/stupid_demo_player.rb">players/stupid_demo_player.rb</a></li>
+						<li><a href="./lib/game_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/game.rb">lib/game.rb</a></li>
 					
 					</ul>
 				</div>
@@ -69,11 +69,9 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#method-i-name">#name</a></li>
+					<li><a href="#method-c-new">::new</a></li>
 					
-					<li><a href="#method-i-new_game">#new_game</a></li>
-					
-					<li><a href="#method-i-take_turn">#take_turn</a></li>
+					<li><a href="#method-i-start">#start</a></li>
 					
 				</ul>
 			</div>
@@ -140,12 +138,11 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">StupidDemoPlayer</h1>
+		<h1 class="class">Game</h1>
 
 		<div id="description">
 			<p>
-Demo player: A pretty stupid player, just randomly returns a letter each
-turn. Doesn&#8217;t guess the same letter twice in the same game.
+Represents a single game of hangman between the passed players
 </p>
 
 		</div>
@@ -158,17 +155,17 @@ turn. Doesn&#8217;t guess the same letter twice in the same game.
 
 		<!-- Methods -->
 		
-		<div id="public-instance-method-details" class="method-section section">
-			<h3 class="section-header">Public Instance Methods</h3>
+		<div id="public-class-method-details" class="method-section section">
+			<h3 class="section-header">Public Class Methods</h3>
 
 		
-			<div id="name-method" class="method-detail ">
-				<a name="method-i-name"></a>
+			<div id="new-method" class="method-detail ">
+				<a name="method-c-new"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">name</span><span
-						class="method-args">()</span>
+					<span class="method-name">new</span><span
+						class="method-args">(words_list)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -176,17 +173,18 @@ turn. Doesn&#8217;t guess the same letter twice in the same game.
 				<div class="method-description">
 					
 					<p>
-Returns this players name.
+Instantiates a new game. Pass in the list of words as an array that can be
+used to generate a phrase to guess
 </p>
 					
 
 					
 					<div class="method-source-code"
-						id="name-source">
+						id="new-source">
 <pre>
-   <span class="ruby-comment cmt"># File players/stupid_demo_player.rb, line 4</span>
-4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
-5:     <span class="ruby-value str">&quot;Stupid Demo Player&quot;</span>
+   <span class="ruby-comment cmt"># File lib/game.rb, line 4</span>
+4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">initialize</span>(<span class="ruby-identifier">words_list</span>)
+5:     <span class="ruby-ivar">@words_list</span> = <span class="ruby-identifier">words_list</span>
 6:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
@@ -198,51 +196,19 @@ Returns this players name.
 			</div>
 
 		
-			<div id="new-game-method" class="method-detail ">
-				<a name="method-i-new_game"></a>
-
-				<div class="method-heading">
-				
-					<span class="method-name">new_game</span><span
-						class="method-args">(dictionary)</span>
-					<span class="method-click-advice">click to toggle source</span>
-				
-				</div>
-
-				<div class="method-description">
-					
-					<p>
-Prepares for a new game. Creates an array of letters that can be used to
-guess.
-</p>
-					
-
-					
-					<div class="method-source-code"
-						id="new-game-source">
-<pre>
-    <span class="ruby-comment cmt"># File players/stupid_demo_player.rb, line 9</span>
- 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_game</span>(<span class="ruby-identifier">dictionary</span>)
-10:     <span class="ruby-ivar">@dictionary</span> = <span class="ruby-identifier">dictionary</span>
-11:     <span class="ruby-ivar">@letters</span> = (<span class="ruby-value str">'a'</span><span class="ruby-operator">..</span><span class="ruby-value str">'z'</span>).<span class="ruby-identifier">to_a</span>
-12:   <span class="ruby-keyword kw">end</span></pre>
-					</div>
-					
-				</div>
-
-				
-
-				
-			</div>
+		</div>
+	
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="take-turn-method" class="method-detail ">
-				<a name="method-i-take_turn"></a>
+			<div id="start-method" class="method-detail ">
+				<a name="method-i-start"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">take_turn</span><span
-						class="method-args">(pattern)</span>
+					<span class="method-name">start</span><span
+						class="method-args">(num_of_words, players)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -250,20 +216,20 @@ guess.
 				<div class="method-description">
 					
 					<p>
-For each turn, randomly select a letter from the remaining list, remove
-this letter from the array and return it.
+Starts the game and continues to allow the players to take turns until one
+is victorious (or it&#8217;s a draw)
 </p>
 					
 
 					
 					<div class="method-source-code"
-						id="take-turn-source">
+						id="start-source">
 <pre>
-    <span class="ruby-comment cmt"># File players/stupid_demo_player.rb, line 15</span>
-15:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">take_turn</span>(<span class="ruby-identifier">pattern</span>)    
-16:     <span class="ruby-identifier">i</span> = <span class="ruby-identifier">rand</span>(<span class="ruby-ivar">@letters</span>.<span class="ruby-identifier">count</span>)
-17:     <span class="ruby-ivar">@letters</span>.<span class="ruby-identifier">delete_at</span>(<span class="ruby-identifier">i</span>) <span class="ruby-comment cmt"># Letter at index i is returned</span>
-18:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/game.rb, line 9</span>
+ 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">start</span>(<span class="ruby-identifier">num_of_words</span>, <span class="ruby-identifier">players</span>)
+10:     <span class="ruby-identifier">phrase</span> = <span class="ruby-constant">PhraseGenerator</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">num_of_words</span>, <span class="ruby-ivar">@words_list</span>)
+11:     
+12:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

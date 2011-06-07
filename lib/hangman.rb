@@ -22,7 +22,7 @@ class Hangman
     num_of_words = @user_input.select_num_of_words
 
     # Start the game
-    #game = Game.new(words)
-    #game.start(num_of_words, selected_players)
+    new_game = Game.new(words)
+    new_game.start(num_of_words, selected_players)
   end
 end

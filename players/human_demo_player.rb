@@ -5,7 +5,7 @@ class HumanDemoPlayer
     "Human Demo Player"
   end
   
-  # Pepares for a new game (no action required for this player).
+  # Prepares for a new game (no action required for this player).
   def new_game(dictionary)
   end
   

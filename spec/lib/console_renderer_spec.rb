@@ -13,6 +13,17 @@ describe "Renderer" do
     end
   end
   
+  context "when rendering the welcome message" do
+    it "should output using stdout puts" do      
+      @renderer.stub(:clear)
+      @renderer.stub(:output)
+      @renderer.stub(:blank_line)
+      @renderer.should_receive(:output).with("Welcome to Hangman")
+      
+      @renderer.welcome
+    end
+  end
+  
   context "when rendering the list of loaded players" do
     before(:each) do
       @renderer.stub(:output)
