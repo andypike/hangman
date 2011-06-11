@@ -53,4 +53,18 @@ class ConsoleRenderer
     
     blank_line
   end
+  
+  # Render a frame of the game loop for the current player states
+  def game_frame(states)
+    clear
+    
+    states.each do |state|
+      output state.player.name
+      output state.current_pattern
+      output "Correct: #{state.correct_guesses.join(' ')}"
+      output "Incorrect: #{state.incorrect_guesses.join(' ')}"
+      output Gallows.stages[state.incorrect_guesses.count - 1]
+      blank_line
+    end
+  end
 end

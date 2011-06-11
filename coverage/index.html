@@ -21,21 +21,21 @@
       <img src="./assets/0.4.4/loading.gif" alt="loading"/>
     </div>
     <div id="wrapper" style="display:none;">
-      <div class="timestamp">Generated <abbr class="timeago" title="2011-06-08T00:11:41+01:00">2011-06-08T00:11:41+01:00</abbr></div>
+      <div class="timestamp">Generated <abbr class="timeago" title="2011-06-12T00:55:23+01:00">2011-06-12T00:55:23+01:00</abbr></div>
       <ul class="group_tabs"></ul>
 
       <div id="content">
         <div class="file_list_container" id="AllFiles">
   <h2>
     All Files
-    (<span class="green">99.09%</span>)
+    (<span class="green">100.0%</span>)
   </h2>
   <a name="AllFiles"></a>
   <div>
-    <b>8</b> files in total.
-    <b>110</b> relevant lines. 
-    <span class="green"><b>109</b> lines covered</span> and
-    <span class="red"><b>1</b> lines missed </span>
+    <b>10</b> files in total.
+    <b>157</b> relevant lines. 
+    <span class="green"><b>157</b> lines covered</span> and
+    <span class="red"><b>0</b> lines missed </span>
   </div>
   <table class="file_list">
     <thead>
@@ -52,11 +52,11 @@
       
       <tr>
         <td><a href="#6da797f435f858f99077ef42b7f0ae25bcca5488" class="src_link" title="./lib/console_renderer.rb">./lib/console_renderer.rb</a></td>
-        <td class="green">96.43 %</td>
-        <td>56</td>
-        <td>28</td>
-        <td>27</td>
-        <td>1</td>
+        <td class="green">100.0 %</td>
+        <td>70</td>
+        <td>37</td>
+        <td>37</td>
+        <td>0</td>
       </tr>
       
       <tr>
@@ -89,9 +89,9 @@
       <tr>
         <td><a href="#cf90d3af73fb3ea10d9d553697f87af905861f30" class="src_link" title="./lib/game.rb">./lib/game.rb</a></td>
         <td class="green">100.0 %</td>
+        <td>53</td>
         <td>13</td>
-        <td>5</td>
-        <td>5</td>
+        <td>13</td>
         <td>0</td>
       </tr>
       
@@ -122,6 +122,24 @@
         <td>0</td>
       </tr>
       
+      <tr>
+        <td><a href="#a5637ef2aa38c7ba03c712f0fcb333470f08b560" class="src_link" title="./lib/player_state.rb">./lib/player_state.rb</a></td>
+        <td class="green">100.0 %</td>
+        <td>35</td>
+        <td>23</td>
+        <td>23</td>
+        <td>0</td>
+      </tr>
+      
+      <tr>
+        <td><a href="#0b00c9627825b55fc5d34e3cb40468d0b24abb44" class="src_link" title="./lib/string_extensions.rb">./lib/string_extensions.rb</a></td>
+        <td class="green">100.0 %</td>
+        <td>12</td>
+        <td>7</td>
+        <td>7</td>
+        <td>0</td>
+      </tr>
+      
     </tbody>
   </table>
 </div>
@@ -143,7 +161,7 @@
     <tr>
       <td colspan="3">
         <h3>./lib/console_renderer.rb</h3>
-        <h4><span class="green">96.43 %</span> covered</h4>
+        <h4><span class="green">100.0 %</span> covered</h4>
       </td>
     </tr>
     <tr>
@@ -337,7 +355,7 @@
     </tr>
   
     
-    <tr class="miss" data-hits="0">
+    <tr class="hit" data-hits="5">
       <td class="line_number">
         <pre>15</pre>
       </td>
@@ -345,7 +363,7 @@
         <pre>    WIN_OS ? system(&quot;cls&quot;) : system(&quot;clear&quot;)</pre>
       </td>
       <td class="hits">
-        0
+        5
       </td>
     </tr>
   
@@ -402,7 +420,7 @@
     </tr>
   
     
-    <tr class="hit" data-hits="4">
+    <tr class="hit" data-hits="9">
       <td class="line_number">
         <pre>20</pre>
       </td>
@@ -410,7 +428,7 @@
         <pre>    output &quot;&quot;</pre>
       </td>
       <td class="hits">
-        4
+        9
       </td>
     </tr>
   
@@ -873,6 +891,188 @@
     <tr class="never" >
       <td class="line_number">
         <pre>56</pre>
+      </td>
+      <td>
+        <pre>  </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>57</pre>
+      </td>
+      <td>
+        <pre>  # Render a frame of the game loop for the current player states</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>58</pre>
+      </td>
+      <td>
+        <pre>  def game_frame(states)</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="6">
+      <td class="line_number">
+        <pre>59</pre>
+      </td>
+      <td>
+        <pre>    clear</pre>
+      </td>
+      <td class="hits">
+        6
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>60</pre>
+      </td>
+      <td>
+        <pre>    </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="6">
+      <td class="line_number">
+        <pre>61</pre>
+      </td>
+      <td>
+        <pre>    states.each do |state|</pre>
+      </td>
+      <td class="hits">
+        6
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="5">
+      <td class="line_number">
+        <pre>62</pre>
+      </td>
+      <td>
+        <pre>      output state.player.name</pre>
+      </td>
+      <td class="hits">
+        5
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="5">
+      <td class="line_number">
+        <pre>63</pre>
+      </td>
+      <td>
+        <pre>      output state.current_pattern</pre>
+      </td>
+      <td class="hits">
+        5
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="5">
+      <td class="line_number">
+        <pre>64</pre>
+      </td>
+      <td>
+        <pre>      output &quot;Correct: #{state.correct_guesses.join(' ')}&quot;</pre>
+      </td>
+      <td class="hits">
+        5
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="5">
+      <td class="line_number">
+        <pre>65</pre>
+      </td>
+      <td>
+        <pre>      output &quot;Incorrect: #{state.incorrect_guesses.join(' ')}&quot;</pre>
+      </td>
+      <td class="hits">
+        5
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="5">
+      <td class="line_number">
+        <pre>66</pre>
+      </td>
+      <td>
+        <pre>      output Gallows.stages[state.incorrect_guesses.count - 1]</pre>
+      </td>
+      <td class="hits">
+        5
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="5">
+      <td class="line_number">
+        <pre>67</pre>
+      </td>
+      <td>
+        <pre>      blank_line</pre>
+      </td>
+      <td class="hits">
+        5
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>68</pre>
+      </td>
+      <td>
+        <pre>    end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>69</pre>
+      </td>
+      <td>
+        <pre>  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>70</pre>
       </td>
       <td>
         <pre>end</pre>
@@ -1817,7 +2017,7 @@
     </tr>
   
     
-    <tr class="hit" data-hits="1">
+    <tr class="hit" data-hits="5">
       <td class="line_number">
         <pre>14</pre>
       </td>
@@ -1825,7 +2025,7 @@
         <pre>&quot;,</pre>
       </td>
       <td class="hits">
-        1
+        5
       </td>
     </tr>
   
@@ -3060,61 +3260,22 @@
     </tr>
   
     
-    <tr class="never" >
+    <tr class="hit" data-hits="2">
       <td class="line_number">
         <pre>3</pre>
       </td>
       <td>
-        <pre>  # Instantiates a new game. Pass in the list of words as an array that can be used to generate a phrase to guess</pre>
+        <pre>  PAUSE_BETWEEN_TURNS = 1</pre>
       </td>
       <td class="hits">
-        
+        2
       </td>
     </tr>
   
     
-    <tr class="hit" data-hits="2">
+    <tr class="never" >
       <td class="line_number">
         <pre>4</pre>
-      </td>
-      <td>
-        <pre>  def initialize(words_list)</pre>
-      </td>
-      <td class="hits">
-        2
-      </td>
-    </tr>
-  
-    
-    <tr class="hit" data-hits="2">
-      <td class="line_number">
-        <pre>5</pre>
-      </td>
-      <td>
-        <pre>    @words_list = words_list</pre>
-      </td>
-      <td class="hits">
-        2
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>6</pre>
-      </td>
-      <td>
-        <pre>  end</pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>7</pre>
       </td>
       <td>
         <pre>  </pre>
@@ -3127,59 +3288,59 @@
     
     <tr class="never" >
       <td class="line_number">
+        <pre>5</pre>
+      </td>
+      <td>
+        <pre>  # Instantiates a new game. Pass in the list of words as an array that can be used to generate a phrase to guess</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>6</pre>
+      </td>
+      <td>
+        <pre>  def initialize(words_list, renderer)</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="10">
+      <td class="line_number">
+        <pre>7</pre>
+      </td>
+      <td>
+        <pre>    @words_list = words_list</pre>
+      </td>
+      <td class="hits">
+        10
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="10">
+      <td class="line_number">
         <pre>8</pre>
       </td>
       <td>
-        <pre>  # Starts the game and continues to allow the players to take turns until one is victorious (or it's a draw)</pre>
+        <pre>    @renderer = renderer</pre>
       </td>
       <td class="hits">
-        
+        10
       </td>
     </tr>
   
     
-    <tr class="hit" data-hits="2">
+    <tr class="never" >
       <td class="line_number">
         <pre>9</pre>
-      </td>
-      <td>
-        <pre>  def start(num_of_words, players)</pre>
-      </td>
-      <td class="hits">
-        2
-      </td>
-    </tr>
-  
-    
-    <tr class="hit" data-hits="2">
-      <td class="line_number">
-        <pre>10</pre>
-      </td>
-      <td>
-        <pre>    phrase = PhraseGenerator.generate(num_of_words, @words_list)</pre>
-      </td>
-      <td class="hits">
-        2
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>11</pre>
-      </td>
-      <td>
-        <pre>    </pre>
-      </td>
-      <td class="hits">
-        
-      </td>
-    </tr>
-  
-    
-    <tr class="never" >
-      <td class="line_number">
-        <pre>12</pre>
       </td>
       <td>
         <pre>  end</pre>
@@ -3192,7 +3353,566 @@
     
     <tr class="never" >
       <td class="line_number">
+        <pre>10</pre>
+      </td>
+      <td>
+        <pre>  </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>11</pre>
+      </td>
+      <td>
+        <pre>  # Starts the game and continues to allow the players to take turns until one is victorious (or it's a draw)</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>12</pre>
+      </td>
+      <td>
+        <pre>  def start(num_of_words, players)</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="10">
+      <td class="line_number">
         <pre>13</pre>
+      </td>
+      <td>
+        <pre>    phrase = PhraseGenerator.generate(num_of_words, @words_list)</pre>
+      </td>
+      <td class="hits">
+        10
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="10">
+      <td class="line_number">
+        <pre>14</pre>
+      </td>
+      <td>
+        <pre>    pattern = PhraseGenerator.patternize(phrase)</pre>
+      </td>
+      <td class="hits">
+        10
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>15</pre>
+      </td>
+      <td>
+        <pre>    </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="10">
+      <td class="line_number">
+        <pre>16</pre>
+      </td>
+      <td>
+        <pre>    states = []</pre>
+      </td>
+      <td class="hits">
+        10
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="10">
+      <td class="line_number">
+        <pre>17</pre>
+      </td>
+      <td>
+        <pre>    players.each do |player|</pre>
+      </td>
+      <td class="hits">
+        10
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="8">
+      <td class="line_number">
+        <pre>18</pre>
+      </td>
+      <td>
+        <pre>      player.new_game Array.new(@words_list)</pre>
+      </td>
+      <td class="hits">
+        8
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="8">
+      <td class="line_number">
+        <pre>19</pre>
+      </td>
+      <td>
+        <pre>      states &lt;&lt; PlayerState.new(player, String.new(pattern))</pre>
+      </td>
+      <td class="hits">
+        8
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>20</pre>
+      </td>
+      <td>
+        <pre>    end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>21</pre>
+      </td>
+      <td>
+        <pre>    </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="10">
+      <td class="line_number">
+        <pre>22</pre>
+      </td>
+      <td>
+        <pre>    @renderer.game_frame(states)</pre>
+      </td>
+      <td class="hits">
+        10
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>23</pre>
+      </td>
+      <td>
+        <pre>    </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>24</pre>
+      </td>
+      <td>
+        <pre>    #while true do</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>25</pre>
+      </td>
+      <td>
+        <pre>    #  @states.each do |state|</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>26</pre>
+      </td>
+      <td>
+        <pre>    #    sleep PAUSE_BETWEEN_TURNS</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>27</pre>
+      </td>
+      <td>
+        <pre>    #    guess = state.player.take_turn(state.current_pattern)</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>28</pre>
+      </td>
+      <td>
+        <pre>    #    state.turn_taken(guess.downcase, phrase)</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>29</pre>
+      </td>
+      <td>
+        <pre>    #    @renderer.game_frame(states)</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>30</pre>
+      </td>
+      <td>
+        <pre>    #  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>31</pre>
+      </td>
+      <td>
+        <pre>    </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>32</pre>
+      </td>
+      <td>
+        <pre>    #  players_found_phrase = @player_states.select { |s| s.found_phrase }</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>33</pre>
+      </td>
+      <td>
+        <pre>    #  if players_found_phrase.size == 1</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>34</pre>
+      </td>
+      <td>
+        <pre>    #    #Winner</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>35</pre>
+      </td>
+      <td>
+        <pre>    #    puts &quot;We have a winner! #{players_found_phrase.first.player.name} found the phrase!&quot;</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>36</pre>
+      </td>
+      <td>
+        <pre>    #    break</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>37</pre>
+      </td>
+      <td>
+        <pre>    #  elsif players_found_phrase.size &gt; 1</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>38</pre>
+      </td>
+      <td>
+        <pre>    #    #Draw</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>39</pre>
+      </td>
+      <td>
+        <pre>    #    drawn_player_names = players_found_phrase.map { |s| s.player.name }</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>40</pre>
+      </td>
+      <td>
+        <pre>    #    puts &quot;We have a draw between #{drawn_player_names.join(' and ')}&quot;</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>41</pre>
+      </td>
+      <td>
+        <pre>    #    break</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>42</pre>
+      </td>
+      <td>
+        <pre>    #  else</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>43</pre>
+      </td>
+      <td>
+        <pre>    #    dead_players = @player_states.select { |s| s.incorrect_guesses.count &gt;= @gallows.stages.count - 1 }</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>44</pre>
+      </td>
+      <td>
+        <pre>    #    if dead_players.count &gt; 0</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>45</pre>
+      </td>
+      <td>
+        <pre>    #      dead_player_names = dead_players.map { |s| s.player.name }</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>46</pre>
+      </td>
+      <td>
+        <pre>    #      puts &quot;Sorry, but you're dead: #{dead_player_names.join(' and ')}&quot;</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>47</pre>
+      </td>
+      <td>
+        <pre>    #      break</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>48</pre>
+      </td>
+      <td>
+        <pre>    #    end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>49</pre>
+      </td>
+      <td>
+        <pre>    #  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>50</pre>
+      </td>
+      <td>
+        <pre>    #end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>51</pre>
+      </td>
+      <td>
+        <pre>    </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>52</pre>
+      </td>
+      <td>
+        <pre>  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>53</pre>
       </td>
       <td>
         <pre>end</pre>
@@ -3541,7 +4261,7 @@
         <pre>25</pre>
       </td>
       <td>
-        <pre>    new_game = Game.new(words)</pre>
+        <pre>    new_game = Game.new(words, @renderer)</pre>
       </td>
       <td class="hits">
         9
@@ -3674,7 +4394,7 @@
     </tr>
   
     
-    <tr class="hit" data-hits="1">
+    <tr class="hit" data-hits="7">
       <td class="line_number">
         <pre>6</pre>
       </td>
@@ -3682,12 +4402,12 @@
         <pre>    words = words_list.sample num_of_words</pre>
       </td>
       <td class="hits">
-        1
+        7
       </td>
     </tr>
   
     
-    <tr class="hit" data-hits="1">
+    <tr class="hit" data-hits="7">
       <td class="line_number">
         <pre>7</pre>
       </td>
@@ -3695,7 +4415,7 @@
         <pre>    phrase = words.join &quot;/&quot;</pre>
       </td>
       <td class="hits">
-        1
+        7
       </td>
     </tr>
   
@@ -4020,7 +4740,7 @@
     </tr>
   
     
-    <tr class="hit" data-hits="524">
+    <tr class="hit" data-hits="530">
       <td class="line_number">
         <pre>17</pre>
       </td>
@@ -4028,12 +4748,12 @@
         <pre>      constant = eval constant_name.to_s</pre>
       </td>
       <td class="hits">
-        524
+        530
       </td>
     </tr>
   
     
-    <tr class="hit" data-hits="524">
+    <tr class="hit" data-hits="530">
       <td class="line_number">
         <pre>18</pre>
       </td>
@@ -4041,7 +4761,7 @@
         <pre>      if not constant.nil? and constant.is_a? Class and constant_name.to_s.end_with? &quot;Player&quot;</pre>
       </td>
       <td class="hits">
-        524
+        530
       </td>
     </tr>
   
@@ -4439,6 +5159,659 @@
     <tr class="never" >
       <td class="line_number">
         <pre>49</pre>
+      </td>
+      <td>
+        <pre>end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    </tbody>
+  </table>
+</div>
+      
+        <div class="source_table" id="a5637ef2aa38c7ba03c712f0fcb333470f08b560">
+  <table>
+    <thead>
+    <tr>
+      <td colspan="3">
+        <h3>./lib/player_state.rb</h3>
+        <h4><span class="green">100.0 %</span> covered</h4>
+      </td>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th>Hits</th>
+    </tr>
+    </thead>
+    <tbody>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>1</pre>
+      </td>
+      <td>
+        <pre>class PlayerState</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>2</pre>
+      </td>
+      <td>
+        <pre>  attr_reader :player</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>3</pre>
+      </td>
+      <td>
+        <pre>  attr_reader :current_pattern</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>4</pre>
+      </td>
+      <td>
+        <pre>  attr_reader :correct_guesses</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>5</pre>
+      </td>
+      <td>
+        <pre>  attr_reader :incorrect_guesses</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>6</pre>
+      </td>
+      <td>
+        <pre>  attr_reader :found_phrase</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>7</pre>
+      </td>
+      <td>
+        <pre>  </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>8</pre>
+      </td>
+      <td>
+        <pre>  def initialize(player, pattern)</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="20">
+      <td class="line_number">
+        <pre>9</pre>
+      </td>
+      <td>
+        <pre>    @player = player</pre>
+      </td>
+      <td class="hits">
+        20
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="20">
+      <td class="line_number">
+        <pre>10</pre>
+      </td>
+      <td>
+        <pre>    @current_pattern = pattern</pre>
+      </td>
+      <td class="hits">
+        20
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="20">
+      <td class="line_number">
+        <pre>11</pre>
+      </td>
+      <td>
+        <pre>    @correct_guesses = []</pre>
+      </td>
+      <td class="hits">
+        20
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="20">
+      <td class="line_number">
+        <pre>12</pre>
+      </td>
+      <td>
+        <pre>    @incorrect_guesses = []</pre>
+      </td>
+      <td class="hits">
+        20
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="20">
+      <td class="line_number">
+        <pre>13</pre>
+      </td>
+      <td>
+        <pre>    @found_phrase = false</pre>
+      </td>
+      <td class="hits">
+        20
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>14</pre>
+      </td>
+      <td>
+        <pre>  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>15</pre>
+      </td>
+      <td>
+        <pre>  </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>16</pre>
+      </td>
+      <td>
+        <pre>  def turn_taken(guess, phrase)</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="8">
+      <td class="line_number">
+        <pre>17</pre>
+      </td>
+      <td>
+        <pre>    matches = phrase.all_indices(guess)</pre>
+      </td>
+      <td class="hits">
+        8
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>18</pre>
+      </td>
+      <td>
+        <pre>    </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="8">
+      <td class="line_number">
+        <pre>19</pre>
+      </td>
+      <td>
+        <pre>    if matches.empty?</pre>
+      </td>
+      <td class="hits">
+        8
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>20</pre>
+      </td>
+      <td>
+        <pre>      @incorrect_guesses &lt;&lt; guess</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>21</pre>
+      </td>
+      <td>
+        <pre>    else</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="6">
+      <td class="line_number">
+        <pre>22</pre>
+      </td>
+      <td>
+        <pre>      @correct_guesses &lt;&lt; guess</pre>
+      </td>
+      <td class="hits">
+        6
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>23</pre>
+      </td>
+      <td>
+        <pre>      </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="6">
+      <td class="line_number">
+        <pre>24</pre>
+      </td>
+      <td>
+        <pre>      matches.each do |i|</pre>
+      </td>
+      <td class="hits">
+        6
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="8">
+      <td class="line_number">
+        <pre>25</pre>
+      </td>
+      <td>
+        <pre>        x = 0</pre>
+      </td>
+      <td class="hits">
+        8
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="8">
+      <td class="line_number">
+        <pre>26</pre>
+      </td>
+      <td>
+        <pre>        guess.each_char do |c|</pre>
+      </td>
+      <td class="hits">
+        8
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="32">
+      <td class="line_number">
+        <pre>27</pre>
+      </td>
+      <td>
+        <pre>          @current_pattern[i + x] = c</pre>
+      </td>
+      <td class="hits">
+        32
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="32">
+      <td class="line_number">
+        <pre>28</pre>
+      </td>
+      <td>
+        <pre>          x = x + 1</pre>
+      </td>
+      <td class="hits">
+        32
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>29</pre>
+      </td>
+      <td>
+        <pre>        end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>30</pre>
+      </td>
+      <td>
+        <pre>      end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>31</pre>
+      </td>
+      <td>
+        <pre>      </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="6">
+      <td class="line_number">
+        <pre>32</pre>
+      </td>
+      <td>
+        <pre>      @found_phrase = @current_pattern.index(&quot;_&quot;) == nil</pre>
+      </td>
+      <td class="hits">
+        6
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>33</pre>
+      </td>
+      <td>
+        <pre>    end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>34</pre>
+      </td>
+      <td>
+        <pre>  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>35</pre>
+      </td>
+      <td>
+        <pre>end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    </tbody>
+  </table>
+</div>
+      
+        <div class="source_table" id="0b00c9627825b55fc5d34e3cb40468d0b24abb44">
+  <table>
+    <thead>
+    <tr>
+      <td colspan="3">
+        <h3>./lib/string_extensions.rb</h3>
+        <h4><span class="green">100.0 %</span> covered</h4>
+      </td>
+    </tr>
+    <tr>
+      <th>#</th>
+      <th></th>
+      <th>Hits</th>
+    </tr>
+    </thead>
+    <tbody>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>1</pre>
+      </td>
+      <td>
+        <pre>class String</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="2">
+      <td class="line_number">
+        <pre>2</pre>
+      </td>
+      <td>
+        <pre>  def all_indices(char)</pre>
+      </td>
+      <td class="hits">
+        2
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="3">
+      <td class="line_number">
+        <pre>3</pre>
+      </td>
+      <td>
+        <pre>    indices = []</pre>
+      </td>
+      <td class="hits">
+        3
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>4</pre>
+      </td>
+      <td>
+        <pre>    </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="3">
+      <td class="line_number">
+        <pre>5</pre>
+      </td>
+      <td>
+        <pre>    pos = -1</pre>
+      </td>
+      <td class="hits">
+        3
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="11">
+      <td class="line_number">
+        <pre>6</pre>
+      </td>
+      <td>
+        <pre>    until (pos = self.index(char, pos + 1)).nil?</pre>
+      </td>
+      <td class="hits">
+        11
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="5">
+      <td class="line_number">
+        <pre>7</pre>
+      </td>
+      <td>
+        <pre>      indices &lt;&lt; pos</pre>
+      </td>
+      <td class="hits">
+        5
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>8</pre>
+      </td>
+      <td>
+        <pre>    end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>9</pre>
+      </td>
+      <td>
+        <pre>    </pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="hit" data-hits="3">
+      <td class="line_number">
+        <pre>10</pre>
+      </td>
+      <td>
+        <pre>    return indices</pre>
+      </td>
+      <td class="hits">
+        3
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>11</pre>
+      </td>
+      <td>
+        <pre>  end</pre>
+      </td>
+      <td class="hits">
+        
+      </td>
+    </tr>
+  
+    
+    <tr class="never" >
+      <td class="line_number">
+        <pre>12</pre>
       </td>
       <td>
         <pre>end</pre>

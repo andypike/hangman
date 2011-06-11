@@ -61,6 +61,55 @@ describe "Renderer" do
       @renderer.errors([])
     end
   end
+  
+  context "when rendering a game loop frame" do
+    before(:each) do
+      @player = FakePlayer1.new 
+      @player_state = PlayerState.new(@player, "___/___/___")
+      @states = [@player_state]
+      @renderer.stub(:output)
+    end
+    
+    it "should clear the screen" do
+      @renderer.should_receive(:clear)
+      
+      @renderer.game_frame([])
+    end
+    
+    it "for each player state it should render their name" do
+      @renderer.should_receive(:output).with("Andy's Awesome Player")
+      
+      @renderer.game_frame(@states)
+    end
+    
+    it "for each player state it should render the state of their current pattern" do
+      @renderer.should_receive(:output).with("___/___/___")
+      
+      @renderer.game_frame(@states)
+    end
+    
+    it "for each player state it should render the list of correct guesses so far" do
+      @player_state.stub(:correct_guesses) { ["a", "b", "c"] }
+      @renderer.should_receive(:output).with("Correct: a b c")
+      
+      @renderer.game_frame(@states)
+    end
+    
+    it "for each player state it should render the list of incorrect guesses so far" do
+      @player_state.stub(:incorrect_guesses) { ["x", "y", "z"] }
+      @renderer.should_receive(:output).with("Incorrect: x y z")
+      
+      @renderer.game_frame(@states)
+    end
+    
+    it "for each player state it should render the gallows at the stage based on the number of incorrect guesses" do
+      @player_state.stub(:incorrect_guesses) { ["x", "y", "z"] }
+      Gallows.stub(:stages) { ["stage 1", "stage 2", "stage 3", "stage 4", "stage 5"] }
+      @renderer.should_receive(:output).with("stage 3")
+      
+      @renderer.game_frame(@states)
+    end
+  end
 end
 
 class FakePlayer1

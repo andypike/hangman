@@ -66,7 +66,7 @@ describe "Hangman" do
     end
     
     it "should create a new game" do
-      Game.should_receive(:new).with(%w{apple bear cat}).and_return(@new_game)
+      Game.should_receive(:new).with(%w{apple bear cat}, @renderer).and_return(@new_game)
       
       @hangman.start
     end
