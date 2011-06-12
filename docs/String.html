@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: Gallows</title>
+	<title>Class: String</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -38,8 +38,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./lib/gallows_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="lib/gallows.rb">lib/gallows.rb</a></li>
+						<li><a href="./lib/string_extensions_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="lib/string_extensions.rb">lib/string_extensions.rb</a></li>
 					
 					</ul>
 				</div>
@@ -69,7 +69,7 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#method-c-stages">::stages</a></li>
+					<li><a href="#method-i-all_indices">#all_indices</a></li>
 					
 				</ul>
 			</div>
@@ -142,11 +142,11 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">Gallows</h1>
+		<h1 class="class">String</h1>
 
 		<div id="description">
 			<p>
-Holds the various stages of the gallows to be drawn
+Extending the string class with extra methods
 </p>
 
 		</div>
@@ -159,17 +159,17 @@ Holds the various stages of the gallows to be drawn
 
 		<!-- Methods -->
 		
-		<div id="public-class-method-details" class="method-section section">
-			<h3 class="section-header">Public Class Methods</h3>
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="stages-method" class="method-detail ">
-				<a name="method-c-stages"></a>
+			<div id="all-indices-method" class="method-detail ">
+				<a name="method-i-all_indices"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">stages</span><span
-						class="method-args">()</span>
+					<span class="method-name">all_indices</span><span
+						class="method-args">(char)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
@@ -177,116 +177,26 @@ Holds the various stages of the gallows to be drawn
 				<div class="method-description">
 					
 					<p>
-Returns the array of strings that represent the stages of the gallows
-construction
+Returns an array containing the indices of where the passed string is found
+in the target string
 </p>
 					
 
 					
 					<div class="method-source-code"
-						id="stages-source">
+						id="all-indices-source">
 <pre>
-     <span class="ruby-comment cmt"># File lib/gallows.rb, line 4</span>
-  4:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">stages</span>
-  5:     [
-  6: <span class="ruby-value str">&quot;  
-  7: 
-  8: 
-  9: 
- 10: 
- 11: 
- 12: 
- 13: 
- 14: &quot;</span>,
- 15: <span class="ruby-value str">&quot;  
- 16:    
- 17:    
- 18:    
- 19:    
- 20:    
- 21:    
- 22: _______&quot;</span>,
- 23: <span class="ruby-value str">&quot;
- 24:    |
- 25:    |
- 26:    |
- 27:    |
- 28:    |
- 29:    |
- 30: ___|___&quot;</span>,
- 31: <span class="ruby-value str">&quot;   _______
- 32:    |
- 33:    |
- 34:    |
- 35:    |
- 36:    |
- 37:    |
- 38: ___|___&quot;</span>,
- 39: <span class="ruby-value str">&quot;   _______
- 40:    |/
- 41:    |
- 42:    |
- 43:    |
- 44:    |
- 45:    |
- 46: ___|___&quot;</span>,
- 47: <span class="ruby-value str">&quot;   _______
- 48:    |/     |
- 49:    |
- 50:    |
- 51:    |
- 52:    |
- 53:    |
- 54: ___|___&quot;</span>,
- 55: <span class="ruby-value str">&quot;   _______
- 56:    |/     |
- 57:    |     (_)
- 58:    |
- 59:    |
- 60:    |
- 61:    |
- 62: ___|___&quot;</span>,
- 63: <span class="ruby-value str">&quot;   _______
- 64:    |/     |
- 65:    |     (_)
- 66:    |      |  
- 67:    |      |
- 68:    |
- 69:    |
- 70: ___|___&quot;</span>,
- 71: <span class="ruby-value str">&quot;   _______
- 72:    |/     |
- 73:    |     (_)
- 74:    |    --|
- 75:    |      |
- 76:    |    
- 77:    |
- 78: ___|___&quot;</span>,
- 79: <span class="ruby-value str">&quot;   _______
- 80:    |/     |
- 81:    |     (_)
- 82:    |    --|--
- 83:    |      |
- 84:    |
- 85:    |
- 86: ___|___&quot;</span>,
- 87: <span class="ruby-value str">&quot;   _______
- 88:    |/     |
- 89:    |     (_)
- 90:    |    --|--
- 91:    |      |
- 92:    |     /
- 93:    |
- 94: ___|___&quot;</span>,
- 95: <span class="ruby-value str">&quot;   _______
- 96:    |/     |
- 97:    |     (_)
- 98:    |    --|--
- 99:    |      |
-100:    |     / \\
-101:    |
-102: ___|___&quot;</span>]
-103:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/string_extensions.rb, line 4</span>
+ 4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">all_indices</span>(<span class="ruby-identifier">char</span>)
+ 5:     <span class="ruby-identifier">indices</span> = []
+ 6:     
+ 7:     <span class="ruby-identifier">pos</span> = <span class="ruby-value">1</span>
+ 8:     <span class="ruby-keyword kw">until</span> (<span class="ruby-identifier">pos</span> = <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">char</span>, <span class="ruby-identifier">pos</span> <span class="ruby-operator">+</span> <span class="ruby-value">1</span>)).<span class="ruby-identifier">nil?</span>
+ 9:       <span class="ruby-identifier">indices</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">pos</span>
+10:     <span class="ruby-keyword kw">end</span>
+11:     
+12:     <span class="ruby-keyword kw">return</span> <span class="ruby-identifier">indices</span>
+13:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

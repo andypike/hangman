@@ -1,3 +1,4 @@
+# Represents the current state of a player during the game
 class PlayerState
   attr_reader :player
   attr_reader :current_pattern
@@ -5,6 +6,7 @@ class PlayerState
   attr_reader :incorrect_guesses
   attr_reader :found_phrase
   
+  # Creates a player state object. Pass in the player and the pattern of the current game
   def initialize(player, pattern)
     @player = player
     @current_pattern = pattern
@@ -13,6 +15,7 @@ class PlayerState
     @found_phrase = false
   end
   
+  # Called by the game once a player has taken a turn. This then updates the player state including guesses and current pattern (to pass to the player next time round)
   def turn_taken(guess, phrase)
     matches = phrase.all_indices(guess)
     

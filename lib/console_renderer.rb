@@ -63,7 +63,7 @@ class ConsoleRenderer
       output state.current_pattern
       output "Correct: #{state.correct_guesses.join(' ')}"
       output "Incorrect: #{state.incorrect_guesses.join(' ')}"
-      output Gallows.stages[state.incorrect_guesses.count - 1]
+      output Gallows.stages[state.incorrect_guesses.count]
       blank_line
     end
   end

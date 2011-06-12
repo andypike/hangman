@@ -119,6 +119,8 @@
 				
 					<li><a href="./Game.html">Game</a></li>
 				
+					<li><a href="./GameAnalyser.html">GameAnalyser</a></li>
+				
 					<li><a href="./Hangman.html">Hangman</a></li>
 				
 					<li><a href="./HumanDemoPlayer.html">HumanDemoPlayer</a></li>
@@ -126,6 +128,10 @@
 					<li><a href="./PhraseGenerator.html">PhraseGenerator</a></li>
 				
 					<li><a href="./PlayerLoader.html">PlayerLoader</a></li>
+				
+					<li><a href="./PlayerState.html">PlayerState</a></li>
+				
+					<li><a href="./String.html">String</a></li>
 				
 					<li><a href="./StupidDemoPlayer.html">StupidDemoPlayer</a></li>
 				
@@ -243,7 +249,7 @@ been received, it creates a new game and enters the game loop
 22:     <span class="ruby-identifier">num_of_words</span> = <span class="ruby-ivar">@user_input</span>.<span class="ruby-identifier">select_num_of_words</span>
 23: 
 24:     <span class="ruby-comment cmt"># Start the game</span>
-25:     <span class="ruby-identifier">new_game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">words</span>)
+25:     <span class="ruby-identifier">new_game</span> = <span class="ruby-constant">Game</span>.<span class="ruby-identifier">new</span>(<span class="ruby-identifier">words</span>, <span class="ruby-ivar">@renderer</span>)
 26:     <span class="ruby-identifier">new_game</span>.<span class="ruby-identifier">start</span>(<span class="ruby-identifier">num_of_words</span>, <span class="ruby-identifier">selected_players</span>)
 27:   <span class="ruby-keyword kw">end</span></pre>
 					</div>

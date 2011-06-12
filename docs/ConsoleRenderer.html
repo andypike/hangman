@@ -75,6 +75,8 @@
 					
 					<li><a href="#method-i-errors">#errors</a></li>
 					
+					<li><a href="#method-i-game_frame">#game_frame</a></li>
+					
 					<li><a href="#method-i-output">#output</a></li>
 					
 					<li><a href="#method-i-players_list">#players_list</a></li>
@@ -127,6 +129,8 @@
 				
 					<li><a href="./Game.html">Game</a></li>
 				
+					<li><a href="./GameAnalyser.html">GameAnalyser</a></li>
+				
 					<li><a href="./Hangman.html">Hangman</a></li>
 				
 					<li><a href="./HumanDemoPlayer.html">HumanDemoPlayer</a></li>
@@ -134,6 +138,10 @@
 					<li><a href="./PhraseGenerator.html">PhraseGenerator</a></li>
 				
 					<li><a href="./PlayerLoader.html">PlayerLoader</a></li>
+				
+					<li><a href="./PlayerState.html">PlayerState</a></li>
+				
+					<li><a href="./String.html">String</a></li>
 				
 					<li><a href="./StupidDemoPlayer.html">StupidDemoPlayer</a></li>
 				
@@ -287,6 +295,51 @@ Display a list of errors while loading players
 53:     
 54:     <span class="ruby-identifier">blank_line</span>
 55:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="game-frame-method" class="method-detail ">
+				<a name="method-i-game_frame"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">game_frame</span><span
+						class="method-args">(states)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					<p>
+Render a frame of the game loop for the current player states
+</p>
+					
+
+					
+					<div class="method-source-code"
+						id="game-frame-source">
+<pre>
+    <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 58</span>
+58:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">game_frame</span>(<span class="ruby-identifier">states</span>)
+59:     <span class="ruby-identifier">clear</span>
+60:     
+61:     <span class="ruby-identifier">states</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">state</span><span class="ruby-operator">|</span>
+62:       <span class="ruby-identifier">output</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">player</span>.<span class="ruby-identifier">name</span>
+63:       <span class="ruby-identifier">output</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">current_pattern</span>
+64:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;Correct: #{state.correct_guesses.join(' ')}&quot;</span>
+65:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;Incorrect: #{state.incorrect_guesses.join(' ')}&quot;</span>
+66:       <span class="ruby-identifier">output</span> <span class="ruby-constant">Gallows</span>.<span class="ruby-identifier">stages</span>[<span class="ruby-identifier">state</span>.<span class="ruby-identifier">incorrect_guesses</span>.<span class="ruby-identifier">count</span>]
+67:       <span class="ruby-identifier">blank_line</span>
+68:     <span class="ruby-keyword kw">end</span>
+69:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

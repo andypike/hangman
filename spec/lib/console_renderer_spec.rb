@@ -104,7 +104,7 @@ describe "Renderer" do
     
     it "for each player state it should render the gallows at the stage based on the number of incorrect guesses" do
       @player_state.stub(:incorrect_guesses) { ["x", "y", "z"] }
-      Gallows.stub(:stages) { ["stage 1", "stage 2", "stage 3", "stage 4", "stage 5"] }
+      Gallows.stub(:stages) { ["blank start", "stage 1", "stage 2", "stage 3", "stage 4", "stage 5"] }
       @renderer.should_receive(:output).with("stage 3")
       
       @renderer.game_frame(@states)
