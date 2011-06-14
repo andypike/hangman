@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: PhraseGenerator</title>
+	<title>Class: AndysPlayer</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -38,8 +38,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./lib/phrase_generator_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="lib/phrase_generator.rb">lib/phrase_generator.rb</a></li>
+						<li><a href="./players/andys_player_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="players/andys_player.rb">players/andys_player.rb</a></li>
 					
 					</ul>
 				</div>
@@ -69,9 +69,11 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
-					<li><a href="#method-c-generate">::generate</a></li>
+					<li><a href="#method-i-name">#name</a></li>
 					
-					<li><a href="#method-c-patternize">::patternize</a></li>
+					<li><a href="#method-i-new_game">#new_game</a></li>
+					
+					<li><a href="#method-i-take_turn">#take_turn</a></li>
 					
 				</ul>
 			</div>
@@ -146,15 +148,10 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">PhraseGenerator</h1>
+		<h1 class="class">AndysPlayer</h1>
 
 		<div id="description">
-			<p>
-From the loaded word list this class can generate new phrases to guess and
-also turn  these into patterns for players to see the format of the phrase
-without giving away the phrase
-</p>
-
+			
 		</div>
 
 		<!-- Constants -->
@@ -165,38 +162,34 @@ without giving away the phrase
 
 		<!-- Methods -->
 		
-		<div id="public-class-method-details" class="method-section section">
-			<h3 class="section-header">Public Class Methods</h3>
+		<div id="public-instance-method-details" class="method-section section">
+			<h3 class="section-header">Public Instance Methods</h3>
 
 		
-			<div id="generate-method" class="method-detail ">
-				<a name="method-c-generate"></a>
+			<div id="name-method" class="method-detail ">
+				<a name="method-i-name"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">generate</span><span
-						class="method-args">(num_of_words, words_list)</span>
+					<span class="method-name">name</span><span
+						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
 
 				<div class="method-description">
 					
-					<p>
-Generates a phrase containing specified number of words in the form
-&#8220;this/is/a/phrase&#8220; (words separated by forward-slashes)
-</p>
+					
 					
 
 					
 					<div class="method-source-code"
-						id="generate-source">
+						id="name-source">
 <pre>
-   <span class="ruby-comment cmt"># File lib/phrase_generator.rb, line 5</span>
-5:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">generate</span>(<span class="ruby-identifier">num_of_words</span>, <span class="ruby-identifier">words_list</span>)
-6:     <span class="ruby-identifier">words</span> = <span class="ruby-identifier">words_list</span>.<span class="ruby-identifier">sample</span> <span class="ruby-identifier">num_of_words</span>
-7:     <span class="ruby-identifier">phrase</span> = <span class="ruby-identifier">words</span>.<span class="ruby-identifier">join</span> <span class="ruby-value str">&quot;/&quot;</span>
-8:   <span class="ruby-keyword kw">end</span></pre>
+   <span class="ruby-comment cmt"># File players/andys_player.rb, line 2</span>
+2:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
+3:     <span class="ruby-value str">&quot;Andy's Super Duper Awesome Player&quot;</span>
+4:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -207,34 +200,67 @@ Generates a phrase containing specified number of words in the form
 			</div>
 
 		
-			<div id="patternize-method" class="method-detail ">
-				<a name="method-c-patternize"></a>
+			<div id="new-game-method" class="method-detail ">
+				<a name="method-i-new_game"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">patternize</span><span
-						class="method-args">(phrase)</span>
+					<span class="method-name">new_game</span><span
+						class="method-args">(dictionary)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
 
 				<div class="method-description">
 					
-					<p>
-Takes a phrase in the form &#8220;this/is/a/phrase&#8220; and replaces the
-letters with underscores to generate a pattern in the form
-&#8220;<em>__</em>/__/<em>/_</em>&#8220;
-</p>
+					
 					
 
 					
 					<div class="method-source-code"
-						id="patternize-source">
+						id="new-game-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/phrase_generator.rb, line 11</span>
-11:   <span class="ruby-keyword kw">def</span> <span class="ruby-keyword kw">self</span>.<span class="ruby-identifier">patternize</span>(<span class="ruby-identifier">phrase</span>)
-12:     <span class="ruby-identifier">phrase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/[a-z]/</span>, <span class="ruby-value str">'_'</span>)
-13:   <span class="ruby-keyword kw">end</span></pre>
+   <span class="ruby-comment cmt"># File players/andys_player.rb, line 6</span>
+6:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_game</span>(<span class="ruby-identifier">dictionary</span>)
+7:     <span class="ruby-ivar">@dictionary</span> = <span class="ruby-identifier">dictionary</span>
+8:     <span class="ruby-ivar">@letters</span> = <span class="ruby-node">%{e t a o i n s r h d l u c m f y w g p b v k x q j z}</span>
+9:   <span class="ruby-keyword kw">end</span></pre>
+					</div>
+					
+				</div>
+
+				
+
+				
+			</div>
+
+		
+			<div id="take-turn-method" class="method-detail ">
+				<a name="method-i-take_turn"></a>
+
+				<div class="method-heading">
+				
+					<span class="method-name">take_turn</span><span
+						class="method-args">(pattern)</span>
+					<span class="method-click-advice">click to toggle source</span>
+				
+				</div>
+
+				<div class="method-description">
+					
+					
+					
+
+					
+					<div class="method-source-code"
+						id="take-turn-source">
+<pre>
+    <span class="ruby-comment cmt"># File players/andys_player.rb, line 11</span>
+11:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">take_turn</span>(<span class="ruby-identifier">pattern</span>)    
+12:     <span class="ruby-identifier">puts</span> <span class="ruby-node">&quot;inside player #{pattern}&quot;</span>
+13:     <span class="ruby-identifier">sleep</span> <span class="ruby-value">1</span>
+14:     <span class="ruby-ivar">@letters</span>.<span class="ruby-identifier">delete_at</span>(<span class="ruby-value">0</span>)
+15:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

@@ -28,10 +28,15 @@ class Game
     begin
       states.each do |state|
         pause
+        
         guess = state.player.take_turn(String.new(state.current_pattern))
-        state.turn_taken(guess.downcase, phrase)
+        state.turn_taken(guess.downcase, phrase) if guess && guess.respond_to?(:downcase)
+        
         @renderer.game_frame(states)
       end
     end until analyser.game_over?
+    
+    @renderer.output "The phrase to find was: #{phrase}"
+    @renderer.blank_line
   end
 end
