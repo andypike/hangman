@@ -9,7 +9,7 @@ describe "PlayerState" do
   end
   
   context "processing a turn taken by a player" do
-    it "should find if the guess is within the phrase" do
+    it "should lowercase and find if the guess is within the phrase" do
       @phrase.should_receive(:all_indices).with("a").and_return([])
       @state.turn_taken("a", @phrase)
     end
@@ -54,6 +54,24 @@ describe "PlayerState" do
       @phrase.stub(:all_indices).and_return([0])
       @state.turn_taken("a", @phrase)
       @state.found_phrase.should be_false
+    end
+    
+    it "should treat a nil guess as incorrect" do
+      @phrase.stub(:all_indices).and_return([])
+      @state.turn_taken(nil, @phrase)
+      @state.incorrect_guesses.should == ["[nil]"]
+    end
+    
+    it "should treat a non string guess as incorrect" do
+      @phrase.stub(:all_indices).and_return([])
+      @state.turn_taken(Object.new, @phrase)
+      @state.incorrect_guesses.should == ["[invalid]"]
+    end
+    
+    it "should treat an empty string guess as incorrect" do
+      @phrase.stub(:all_indices).and_return([])
+      @state.turn_taken("", @phrase)
+      @state.incorrect_guesses.should == ["[empty]"]
     end
   end
 end

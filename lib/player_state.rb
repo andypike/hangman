@@ -17,22 +17,31 @@ class PlayerState
   
   # Called by the game once a player has taken a turn. This then updates the player state including guesses and current pattern (to pass to the player next time round)
   def turn_taken(guess, phrase)
-    matches = phrase.all_indices(guess)
-    
-    if matches.empty?
-      @incorrect_guesses << guess
+    if guess.nil?
+      @incorrect_guesses << "[nil]"
+    elsif !guess.respond_to?(:downcase)
+      @incorrect_guesses << "[invalid]"
+    elsif guess.empty?
+      @incorrect_guesses << "[empty]"
     else
-      @correct_guesses << guess
+      guess = guess.downcase
+      matches = phrase.all_indices(guess)
+    
+      if matches.empty?
+        @incorrect_guesses << guess
+      else
+        @correct_guesses << guess
       
-      matches.each do |i|
-        x = 0
-        guess.each_char do |c|
-          @current_pattern[i + x] = c
-          x = x + 1
+        matches.each do |i|
+          x = 0
+          guess.each_char do |c|
+            @current_pattern[i + x] = c
+            x = x + 1
+          end
         end
-      end
       
-      @found_phrase = @current_pattern.index("_") == nil
+        @found_phrase = @current_pattern.index("_") == nil
+      end
     end
   end
 end

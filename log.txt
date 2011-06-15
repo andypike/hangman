@@ -1,145 +1,25 @@
-************* Next Turn with pattern: _______/_______/____/________/____ *************
-Possible words for pattern _______: ["against", "arrange", "believe", "between", "brother", "brought", "capital", "captain", "century", "certain", "collect", "company", "compare", "connect", "contain", "control", "correct", "country", "current", "decimal", "develop", "discuss", "distant", "element", "evening", "example", "forward", "general", "history", "hundred", "imagine", "include", "instant", "machine", "measure", "million", "morning", "natural", "nothing", "numeral", "observe", "operate", "pattern", "perhaps", "picture", "prepare", "present", "problem", "process", "produce", "product", "protect", "provide", "receive", "require", "science", "section", "segment", "several", "similar", "soldier", "special", "station", "strange", "stretch", "student", "subject", "success", "suggest", "support", "surface", "thought", "through", "trouble", "village", "weather", "whether", "written"]
-Letter frequencies for possible words: {"a"=>36, "g"=>15, "i"=>33, "n"=>41, "s"=>32, "t"=>51, "r"=>52, "e"=>78, "b"=>8, "l"=>23, "v"=>8, "w"=>5, "o"=>32, "h"=>15, "u"=>23, "c"=>35, "p"=>23, "y"=>4, "m"=>14, "d"=>13, "x"=>1, "f"=>2, "q"=>1, "j"=>1}
-Best letter for word: e
-Possible words for pattern _______: ["against", "arrange", "believe", "between", "brother", "brought", "capital", "captain", "century", "certain", "collect", "company", "compare", "connect", "contain", "control", "correct", "country", "current", "decimal", "develop", "discuss", "distant", "element", "evening", "example", "forward", "general", "history", "hundred", "imagine", "include", "instant", "machine", "measure", "million", "morning", "natural", "nothing", "numeral", "observe", "operate", "pattern", "perhaps", "picture", "prepare", "present", "problem", "process", "produce", "product", "protect", "provide", "receive", "require", "science", "section", "segment", "several", "similar", "soldier", "special", "station", "strange", "stretch", "student", "subject", "success", "suggest", "support", "surface", "thought", "through", "trouble", "village", "weather", "whether", "written"]
-Letter frequencies for possible words: {"a"=>36, "g"=>15, "i"=>33, "n"=>41, "s"=>32, "t"=>51, "r"=>52, "e"=>78, "b"=>8, "l"=>23, "v"=>8, "w"=>5, "o"=>32, "h"=>15, "u"=>23, "c"=>35, "p"=>23, "y"=>4, "m"=>14, "d"=>13, "x"=>1, "f"=>2, "q"=>1, "j"=>1}
-Best letter for word: e
-Possible words for pattern ____: ["able", "also", "area", "atom", "baby", "back", "ball", "band", "bank", "base", "bear", "beat", "been", "bell", "best", "bird", "blow", "blue", "boat", "body", "bone", "book", "born", "both", "burn", "busy", "call", "came", "camp", "card", "care", "case", "cell", "cent", "city", "coat", "cold", "come", "cook", "cool", "copy", "corn", "cost", "crop", "dark", "dead", "deal", "dear", "deep", "does", "done", "door", "down", "draw", "drop", "duck", "each", "ease", "east", "edge", "else", "even", "ever", "face", "fact", "fair", "fall", "farm", "fast", "fear", "feed", "feel", "feet", "fell", "felt", "fill", "find", "fine", "fire", "fish", "five", "flat", "flow", "food", "foot", "form", "four", "free", "from", "full", "game", "gave", "girl", "give", "glad", "gold", "gone", "good", "grew", "grey", "grow", "hair", "half", "hand", "hard", "have", "head", "hear", "heat", "held", "help", "here", "high", "hill", "hold", "hole", "home", "hope", "hour", "huge", "hunt", "idea", "inch", "iron", "join", "jump", "just", "keep", "kept", "kill", "kind", "king", "knew", "know", "lady", "lake", "land", "last", "late", "lead", "left", "less", "life", "lift", "like", "line", "list", "live", "lone", "long", "look", "lost", "loud", "love", "made", "main", "make", "many", "mark", "mass", "mean", "meat", "meet", "mile", "milk", "mind", "mine", "miss", "moon", "more", "most", "move", "much", "must", "name", "near", "neck", "need", "next", "nine", "noon", "nose", "note", "noun", "once", "only", "open", "over", "page", "pair", "part", "pass", "past", "path", "pick", "plan", "play", "poem", "poor", "port", "pose", "post", "pull", "push", "race", "rail", "rain", "read", "real", "rest", "rich", "ride", "ring", "rise", "road", "rock", "roll", "room", "root", "rope", "rose", "rule", "safe", "said", "sail", "salt", "same", "sand", "save", "seat", "seed", "seem", "self", "sell", "send", "sent", "ship", "shoe", "shop", "show", "side", "sign", "sing", "size", "skin", "slip", "slow", "snow", "soft", "soil", "some", "song", "soon", "spot", "star", "stay", "step", "stop", "such", "suit", "sure", "swim", "tail", "take", "talk", "tall", "team", "tell", "term", "test", "than", "that", "them", "then", "they", "thin", "this", "thus", "time", "tiny", "tire", "told", "tone", "took", "tool", "town", "tree", "trip", "tube", "turn", "type", "unit", "vary", "verb", "very", "view", "wait", "walk", "wall", "want", "warm", "wash", "wave", "wear", "week", "well", "went", "were", "west", "what", "when", "wide", "wife", "wild", "will", "wind", "wing", "wire", "wish", "with", "wood", "word", "work", "yard", "year", "your"]
-Letter frequencies for possible words: {"a"=>108, "b"=>26, "l"=>96, "e"=>169, "s"=>80, "o"=>109, "r"=>78, "t"=>87, "m"=>42, "y"=>19, "c"=>32, "k"=>29, "n"=>74, "d"=>54, "i"=>73, "w"=>41, "u"=>26, "h"=>47, "p"=>36, "g"=>22, "v"=>16, "f"=>35, "j"=>3, "x"=>1, "z"=>1}
-Best letter for word: e
-Possible words for pattern ________: ["children", "complete", "consider", "continue", "describe", "division", "electric", "exercise", "fraction", "indicate", "industry", "interest", "language", "material", "molecule", "mountain", "multiply", "opposite", "original", "populate", "position", "possible", "practice", "probable", "property", "question", "quotient", "remember", "sentence", "separate", "shoulder", "solution", "straight", "subtract", "surprise", "syllable", "thousand", "together", "triangle"]
-Letter frequencies for possible words: {"c"=>15, "h"=>5, "i"=>30, "l"=>19, "d"=>8, "r"=>24, "e"=>41, "n"=>21, "o"=>23, "m"=>7, "p"=>14, "t"=>30, "s"=>21, "u"=>14, "b"=>7, "v"=>1, "x"=>1, "f"=>1, "a"=>18, "y"=>4, "g"=>6, "q"=>2}
-Best letter for word: e
+************* Next Turn with pattern: ____ *************
 Possible words for pattern ____: ["able", "also", "area", "atom", "baby", "back", "ball", "band", "bank", "base", "bear", "beat", "been", "bell", "best", "bird", "blow", "blue", "boat", "body", "bone", "book", "born", "both", "burn", "busy", "call", "came", "camp", "card", "care", "case", "cell", "cent", "city", "coat", "cold", "come", "cook", "cool", "copy", "corn", "cost", "crop", "dark", "dead", "deal", "dear", "deep", "does", "done", "door", "down", "draw", "drop", "duck", "each", "ease", "east", "edge", "else", "even", "ever", "face", "fact", "fair", "fall", "farm", "fast", "fear", "feed", "feel", "feet", "fell", "felt", "fill", "find", "fine", "fire", "fish", "five", "flat", "flow", "food", "foot", "form", "four", "free", "from", "full", "game", "gave", "girl", "give", "glad", "gold", "gone", "good", "grew", "grey", "grow", "hair", "half", "hand", "hard", "have", "head", "hear", "heat", "held", "help", "here", "high", "hill", "hold", "hole", "home", "hope", "hour", "huge", "hunt", "idea", "inch", "iron", "join", "jump", "just", "keep", "kept", "kill", "kind", "king", "knew", "know", "lady", "lake", "land", "last", "late", "lead", "left", "less", "life", "lift", "like", "line", "list", "live", "lone", "long", "look", "lost", "loud", "love", "made", "main", "make", "many", "mark", "mass", "mean", "meat", "meet", "mile", "milk", "mind", "mine", "miss", "moon", "more", "most", "move", "much", "must", "name", "near", "neck", "need", "next", "nine", "noon", "nose", "note", "noun", "once", "only", "open", "over", "page", "pair", "part", "pass", "past", "path", "pick", "plan", "play", "poem", "poor", "port", "pose", "post", "pull", "push", "race", "rail", "rain", "read", "real", "rest", "rich", "ride", "ring", "rise", "road", "rock", "roll", "room", "root", "rope", "rose", "rule", "safe", "said", "sail", "salt", "same", "sand", "save", "seat", "seed", "seem", "self", "sell", "send", "sent", "ship", "shoe", "shop", "show", "side", "sign", "sing", "size", "skin", "slip", "slow", "snow", "soft", "soil", "some", "song", "soon", "spot", "star", "stay", "step", "stop", "such", "suit", "sure", "swim", "tail", "take", "talk", "tall", "team", "tell", "term", "test", "than", "that", "them", "then", "they", "thin", "this", "thus", "time", "tiny", "tire", "told", "tone", "took", "tool", "town", "tree", "trip", "tube", "turn", "type", "unit", "vary", "verb", "very", "view", "wait", "walk", "wall", "want", "warm", "wash", "wave", "wear", "week", "well", "went", "were", "west", "what", "when", "wide", "wife", "wild", "will", "wind", "wing", "wire", "wish", "with", "wood", "word", "work", "yard", "year", "your"]
 Letter frequencies for possible words: {"a"=>108, "b"=>26, "l"=>96, "e"=>169, "s"=>80, "o"=>109, "r"=>78, "t"=>87, "m"=>42, "y"=>19, "c"=>32, "k"=>29, "n"=>74, "d"=>54, "i"=>73, "w"=>41, "u"=>26, "h"=>47, "p"=>36, "g"=>22, "v"=>16, "f"=>35, "j"=>3, "x"=>1, "z"=>1}
 Best letter for word: e
 Guessing best letter candidate: e
-************* Next Turn with pattern: _e____e/_______/_e__/_______e/___e *************
-Possible words for pattern _e____e: ["believe", "measure", "receive", "require"]
-Letter frequencies for possible words: {"b"=>1, "l"=>1, "i"=>3, "e"=>2, "v"=>2, "m"=>1, "a"=>1, "s"=>1, "u"=>2, "r"=>4, "c"=>1, "q"=>1}
+************* Next Turn with pattern: __e_ *************
+Possible words for pattern __e_: ["area", "been", "deep", "does", "even", "ever", "feed", "feel", "feet", "free", "grew", "grey", "idea", "keep", "knew", "meet", "need", "open", "over", "poem", "seed", "seem", "step", "them", "then", "they", "tree", "view", "week", "when"]
+Letter frequencies for possible words: {"a"=>3, "r"=>7, "b"=>1, "e"=>15, "n"=>7, "d"=>6, "p"=>5, "o"=>4, "s"=>4, "v"=>4, "f"=>4, "l"=>1, "t"=>7, "g"=>2, "w"=>5, "y"=>2, "i"=>2, "k"=>3, "m"=>4, "h"=>4}
 Best letter for word: r
-Possible words for pattern _______: ["against", "arrange", "believe", "between", "brother", "brought", "capital", "captain", "century", "certain", "collect", "company", "compare", "connect", "contain", "control", "correct", "country", "current", "decimal", "develop", "discuss", "distant", "element", "evening", "example", "forward", "general", "history", "hundred", "imagine", "include", "instant", "machine", "measure", "million", "morning", "natural", "nothing", "numeral", "observe", "operate", "pattern", "perhaps", "picture", "prepare", "present", "problem", "process", "produce", "product", "protect", "provide", "receive", "require", "science", "section", "segment", "several", "similar", "soldier", "special", "station", "strange", "stretch", "student", "subject", "success", "suggest", "support", "surface", "thought", "through", "trouble", "village", "weather", "whether", "written"]
-Letter frequencies for possible words: {"a"=>36, "g"=>15, "i"=>33, "n"=>41, "s"=>32, "t"=>51, "r"=>52, "e"=>78, "b"=>8, "l"=>23, "v"=>8, "w"=>5, "o"=>32, "h"=>15, "u"=>23, "c"=>35, "p"=>23, "y"=>4, "m"=>14, "d"=>13, "x"=>1, "f"=>2, "q"=>1, "j"=>1}
-Best letter for word: r
-Possible words for pattern _e__: ["bear", "beat", "been", "bell", "best", "cell", "cent", "dead", "deal", "dear", "deep", "fear", "feed", "feel", "feet", "fell", "felt", "head", "hear", "heat", "held", "help", "here", "keep", "kept", "lead", "left", "less", "mean", "meat", "meet", "near", "neck", "need", "next", "read", "real", "rest", "seat", "seed", "seem", "self", "sell", "send", "sent", "team", "tell", "term", "test", "verb", "very", "wear", "week", "well", "went", "were", "west", "year"]
-Letter frequencies for possible words: {"b"=>6, "a"=>19, "r"=>15, "t"=>21, "e"=>13, "n"=>10, "l"=>22, "s"=>13, "c"=>3, "d"=>13, "p"=>4, "f"=>8, "h"=>6, "k"=>4, "m"=>6, "x"=>1, "v"=>2, "y"=>2, "w"=>6}
-Best letter for word: l
-Possible words for pattern _______e: ["complete", "continue", "describe", "exercise", "indicate", "language", "molecule", "opposite", "populate", "possible", "practice", "probable", "sentence", "separate", "surprise", "syllable", "triangle"]
-Letter frequencies for possible words: {"c"=>9, "o"=>8, "m"=>2, "p"=>10, "l"=>11, "e"=>8, "t"=>9, "n"=>7, "i"=>10, "u"=>5, "d"=>2, "s"=>10, "r"=>8, "b"=>5, "x"=>1, "a"=>10, "g"=>3, "y"=>1}
-Best letter for word: l
-Possible words for pattern ___e: ["able", "base", "blue", "bone", "came", "care", "case", "come", "done", "ease", "edge", "else", "face", "fine", "fire", "five", "free", "game", "gave", "give", "gone", "have", "here", "hole", "home", "hope", "huge", "lake", "late", "life", "like", "line", "live", "lone", "love", "made", "make", "mile", "mine", "more", "move", "name", "nine", "nose", "note", "once", "page", "pose", "race", "ride", "rise", "rope", "rose", "rule", "safe", "same", "save", "shoe", "side", "size", "some", "sure", "take", "time", "tire", "tone", "tree", "tube", "type", "wave", "were", "wide", "wife", "wire"]
-Letter frequencies for possible words: {"a"=>22, "b"=>5, "l"=>14, "s"=>16, "u"=>5, "o"=>20, "n"=>14, "c"=>7, "m"=>14, "r"=>16, "d"=>6, "e"=>7, "g"=>7, "f"=>8, "i"=>20, "v"=>9, "h"=>7, "p"=>5, "k"=>4, "t"=>9, "z"=>1, "y"=>1, "w"=>5}
-Best letter for word: a
 Guessing best letter candidate: r
-************* Next Turn with pattern: re___re/_______/_e__/_______e/___e *************
-Possible words for pattern re___re: ["require"]
-Letter frequencies for possible words: {"q"=>1, "u"=>1, "i"=>1}
-Best letter for word: q
-Possible words for pattern _______: ["against", "arrange", "believe", "between", "brother", "brought", "capital", "captain", "century", "certain", "collect", "company", "compare", "connect", "contain", "control", "correct", "country", "current", "decimal", "develop", "discuss", "distant", "element", "evening", "example", "forward", "general", "history", "hundred", "imagine", "include", "instant", "machine", "measure", "million", "morning", "natural", "nothing", "numeral", "observe", "operate", "pattern", "perhaps", "picture", "prepare", "present", "problem", "process", "produce", "product", "protect", "provide", "receive", "require", "science", "section", "segment", "several", "similar", "soldier", "special", "station", "strange", "stretch", "student", "subject", "success", "suggest", "support", "surface", "thought", "through", "trouble", "village", "weather", "whether", "written"]
-Letter frequencies for possible words: {"a"=>36, "g"=>15, "i"=>33, "n"=>41, "s"=>32, "t"=>51, "r"=>52, "e"=>78, "b"=>8, "l"=>23, "v"=>8, "w"=>5, "o"=>32, "h"=>15, "u"=>23, "c"=>35, "p"=>23, "y"=>4, "m"=>14, "d"=>13, "x"=>1, "f"=>2, "q"=>1, "j"=>1}
-Best letter for word: t
-Possible words for pattern _e__: ["bear", "beat", "been", "bell", "best", "cell", "cent", "dead", "deal", "dear", "deep", "fear", "feed", "feel", "feet", "fell", "felt", "head", "hear", "heat", "held", "help", "here", "keep", "kept", "lead", "left", "less", "mean", "meat", "meet", "near", "neck", "need", "next", "read", "real", "rest", "seat", "seed", "seem", "self", "sell", "send", "sent", "team", "tell", "term", "test", "verb", "very", "wear", "week", "well", "went", "were", "west", "year"]
-Letter frequencies for possible words: {"b"=>6, "a"=>19, "r"=>15, "t"=>21, "e"=>13, "n"=>10, "l"=>22, "s"=>13, "c"=>3, "d"=>13, "p"=>4, "f"=>8, "h"=>6, "k"=>4, "m"=>6, "x"=>1, "v"=>2, "y"=>2, "w"=>6}
-Best letter for word: l
-Possible words for pattern _______e: ["complete", "continue", "describe", "exercise", "indicate", "language", "molecule", "opposite", "populate", "possible", "practice", "probable", "sentence", "separate", "surprise", "syllable", "triangle"]
-Letter frequencies for possible words: {"c"=>9, "o"=>8, "m"=>2, "p"=>10, "l"=>11, "e"=>8, "t"=>9, "n"=>7, "i"=>10, "u"=>5, "d"=>2, "s"=>10, "r"=>8, "b"=>5, "x"=>1, "a"=>10, "g"=>3, "y"=>1}
-Best letter for word: l
-Possible words for pattern ___e: ["able", "base", "blue", "bone", "came", "care", "case", "come", "done", "ease", "edge", "else", "face", "fine", "fire", "five", "free", "game", "gave", "give", "gone", "have", "here", "hole", "home", "hope", "huge", "lake", "late", "life", "like", "line", "live", "lone", "love", "made", "make", "mile", "mine", "more", "move", "name", "nine", "nose", "note", "once", "page", "pose", "race", "ride", "rise", "rope", "rose", "rule", "safe", "same", "save", "shoe", "side", "size", "some", "sure", "take", "time", "tire", "tone", "tree", "tube", "type", "wave", "were", "wide", "wife", "wire"]
-Letter frequencies for possible words: {"a"=>22, "b"=>5, "l"=>14, "s"=>16, "u"=>5, "o"=>20, "n"=>14, "c"=>7, "m"=>14, "r"=>16, "d"=>6, "e"=>7, "g"=>7, "f"=>8, "i"=>20, "v"=>9, "h"=>7, "p"=>5, "k"=>4, "t"=>9, "z"=>1, "y"=>1, "w"=>5}
-Best letter for word: a
-We know 1 words so guess the first one: require
-************* Next Turn with pattern: require/_______/_e__/_______e/___e *************
-Possible words for pattern _______: ["against", "arrange", "believe", "between", "brother", "brought", "capital", "captain", "century", "certain", "collect", "company", "compare", "connect", "contain", "control", "correct", "country", "current", "decimal", "develop", "discuss", "distant", "element", "evening", "example", "forward", "general", "history", "hundred", "imagine", "include", "instant", "machine", "measure", "million", "morning", "natural", "nothing", "numeral", "observe", "operate", "pattern", "perhaps", "picture", "prepare", "present", "problem", "process", "produce", "product", "protect", "provide", "receive", "require", "science", "section", "segment", "several", "similar", "soldier", "special", "station", "strange", "stretch", "student", "subject", "success", "suggest", "support", "surface", "thought", "through", "trouble", "village", "weather", "whether", "written"]
-Letter frequencies for possible words: {"a"=>36, "g"=>15, "i"=>33, "n"=>41, "s"=>32, "t"=>51, "r"=>52, "e"=>78, "b"=>8, "l"=>23, "v"=>8, "w"=>5, "o"=>32, "h"=>15, "u"=>23, "c"=>35, "p"=>23, "y"=>4, "m"=>14, "d"=>13, "x"=>1, "f"=>2, "q"=>1, "j"=>1}
-Best letter for word: t
-Possible words for pattern _e__: ["bear", "beat", "been", "bell", "best", "cell", "cent", "dead", "deal", "dear", "deep", "fear", "feed", "feel", "feet", "fell", "felt", "head", "hear", "heat", "held", "help", "here", "keep", "kept", "lead", "left", "less", "mean", "meat", "meet", "near", "neck", "need", "next", "read", "real", "rest", "seat", "seed", "seem", "self", "sell", "send", "sent", "team", "tell", "term", "test", "verb", "very", "wear", "week", "well", "went", "were", "west", "year"]
-Letter frequencies for possible words: {"b"=>6, "a"=>19, "r"=>15, "t"=>21, "e"=>13, "n"=>10, "l"=>22, "s"=>13, "c"=>3, "d"=>13, "p"=>4, "f"=>8, "h"=>6, "k"=>4, "m"=>6, "x"=>1, "v"=>2, "y"=>2, "w"=>6}
-Best letter for word: l
-Possible words for pattern _______e: ["complete", "continue", "describe", "exercise", "indicate", "language", "molecule", "opposite", "populate", "possible", "practice", "probable", "sentence", "separate", "surprise", "syllable", "triangle"]
-Letter frequencies for possible words: {"c"=>9, "o"=>8, "m"=>2, "p"=>10, "l"=>11, "e"=>8, "t"=>9, "n"=>7, "i"=>10, "u"=>5, "d"=>2, "s"=>10, "r"=>8, "b"=>5, "x"=>1, "a"=>10, "g"=>3, "y"=>1}
-Best letter for word: l
-Possible words for pattern ___e: ["able", "base", "blue", "bone", "came", "care", "case", "come", "done", "ease", "edge", "else", "face", "fine", "fire", "five", "free", "game", "gave", "give", "gone", "have", "here", "hole", "home", "hope", "huge", "lake", "late", "life", "like", "line", "live", "lone", "love", "made", "make", "mile", "mine", "more", "move", "name", "nine", "nose", "note", "once", "page", "pose", "race", "ride", "rise", "rope", "rose", "rule", "safe", "same", "save", "shoe", "side", "size", "some", "sure", "take", "time", "tire", "tone", "tree", "tube", "type", "wave", "were", "wide", "wife", "wire"]
-Letter frequencies for possible words: {"a"=>22, "b"=>5, "l"=>14, "s"=>16, "u"=>5, "o"=>20, "n"=>14, "c"=>7, "m"=>14, "r"=>16, "d"=>6, "e"=>7, "g"=>7, "f"=>8, "i"=>20, "v"=>9, "h"=>7, "p"=>5, "k"=>4, "t"=>9, "z"=>1, "y"=>1, "w"=>5}
-Best letter for word: a
-Guessing best letter candidate: l
-************* Next Turn with pattern: require/_______/_ell/l______e/l__e *************
-Possible words for pattern _______: ["against", "arrange", "believe", "between", "brother", "brought", "capital", "captain", "century", "certain", "collect", "company", "compare", "connect", "contain", "control", "correct", "country", "current", "decimal", "develop", "discuss", "distant", "element", "evening", "example", "forward", "general", "history", "hundred", "imagine", "include", "instant", "machine", "measure", "million", "morning", "natural", "nothing", "numeral", "observe", "operate", "pattern", "perhaps", "picture", "prepare", "present", "problem", "process", "produce", "product", "protect", "provide", "receive", "require", "science", "section", "segment", "several", "similar", "soldier", "special", "station", "strange", "stretch", "student", "subject", "success", "suggest", "support", "surface", "thought", "through", "trouble", "village", "weather", "whether", "written"]
-Letter frequencies for possible words: {"a"=>36, "g"=>15, "i"=>33, "n"=>41, "s"=>32, "t"=>51, "r"=>52, "e"=>78, "b"=>8, "l"=>23, "v"=>8, "w"=>5, "o"=>32, "h"=>15, "u"=>23, "c"=>35, "p"=>23, "y"=>4, "m"=>14, "d"=>13, "x"=>1, "f"=>2, "q"=>1, "j"=>1}
-Best letter for word: t
-Possible words for pattern _ell: ["bell", "cell", "fell", "sell", "tell", "well"]
-Letter frequencies for possible words: {"b"=>1, "c"=>1, "f"=>1, "s"=>1, "t"=>1, "w"=>1}
-Best letter for word: b
-Possible words for pattern l______e: ["language"]
-Letter frequencies for possible words: {"a"=>2, "n"=>1, "g"=>2, "u"=>1}
-Best letter for word: a
-Possible words for pattern l__e: ["lake", "late", "life", "like", "line", "live", "lone", "love"]
-Letter frequencies for possible words: {"a"=>2, "k"=>2, "t"=>1, "i"=>4, "f"=>1, "n"=>2, "v"=>2, "o"=>2}
-Best letter for word: i
-We know 1 words so guess the first one: language
-************* Next Turn with pattern: require/_______/_ell/language/l__e *************
-Possible words for pattern _______: ["against", "arrange", "believe", "between", "brother", "brought", "capital", "captain", "century", "certain", "collect", "company", "compare", "connect", "contain", "control", "correct", "country", "current", "decimal", "develop", "discuss", "distant", "element", "evening", "example", "forward", "general", "history", "hundred", "imagine", "include", "instant", "machine", "measure", "million", "morning", "natural", "nothing", "numeral", "observe", "operate", "pattern", "perhaps", "picture", "prepare", "present", "problem", "process", "produce", "product", "protect", "provide", "receive", "require", "science", "section", "segment", "several", "similar", "soldier", "special", "station", "strange", "stretch", "student", "subject", "success", "suggest", "support", "surface", "thought", "through", "trouble", "village", "weather", "whether", "written"]
-Letter frequencies for possible words: {"a"=>36, "g"=>15, "i"=>33, "n"=>41, "s"=>32, "t"=>51, "r"=>52, "e"=>78, "b"=>8, "l"=>23, "v"=>8, "w"=>5, "o"=>32, "h"=>15, "u"=>23, "c"=>35, "p"=>23, "y"=>4, "m"=>14, "d"=>13, "x"=>1, "f"=>2, "q"=>1, "j"=>1}
-Best letter for word: t
-Possible words for pattern _ell: ["bell", "cell", "fell", "sell", "tell", "well"]
-Letter frequencies for possible words: {"b"=>1, "c"=>1, "f"=>1, "s"=>1, "t"=>1, "w"=>1}
-Best letter for word: b
-Possible words for pattern l__e: ["lake", "late", "life", "like", "line", "live", "lone", "love"]
-Letter frequencies for possible words: {"a"=>2, "k"=>2, "t"=>1, "i"=>4, "f"=>1, "n"=>2, "v"=>2, "o"=>2}
-Best letter for word: i
-Guessing best letter candidate: t
-************* Next Turn with pattern: require/__t____/_ell/language/l__e *************
-Possible words for pattern __t____: ["between", "natural", "nothing", "pattern"]
-Letter frequencies for possible words: {"b"=>1, "e"=>4, "w"=>1, "n"=>5, "a"=>3, "u"=>1, "r"=>2, "l"=>1, "o"=>1, "h"=>1, "i"=>1, "g"=>1, "p"=>1, "t"=>1}
+************* Next Turn with pattern: __e_ *************
+Possible words for pattern __e_: ["area", "been", "deep", "does", "even", "ever", "feed", "feel", "feet", "free", "grew", "grey", "idea", "keep", "knew", "meet", "need", "open", "over", "poem", "seed", "seem", "step", "them", "then", "they", "tree", "view", "week", "when"]
+Letter frequencies for possible words: {"a"=>3, "r"=>7, "b"=>1, "e"=>15, "n"=>7, "d"=>6, "p"=>5, "o"=>4, "s"=>4, "v"=>4, "f"=>4, "l"=>1, "t"=>7, "g"=>2, "w"=>5, "y"=>2, "i"=>2, "k"=>3, "m"=>4, "h"=>4}
 Best letter for word: n
-Possible words for pattern _ell: ["bell", "cell", "fell", "sell", "tell", "well"]
-Letter frequencies for possible words: {"b"=>1, "c"=>1, "f"=>1, "s"=>1, "t"=>1, "w"=>1}
-Best letter for word: b
-Possible words for pattern l__e: ["lake", "late", "life", "like", "line", "live", "lone", "love"]
-Letter frequencies for possible words: {"a"=>2, "k"=>2, "t"=>1, "i"=>4, "f"=>1, "n"=>2, "v"=>2, "o"=>2}
-Best letter for word: i
 Guessing best letter candidate: n
-************* Next Turn with pattern: require/n_t__n_/_ell/language/l__e *************
-Possible words for pattern n_t__n_: ["nothing"]
-Letter frequencies for possible words: {"o"=>1, "h"=>1, "i"=>1, "g"=>1}
-Best letter for word: o
-Possible words for pattern _ell: ["bell", "cell", "fell", "sell", "tell", "well"]
-Letter frequencies for possible words: {"b"=>1, "c"=>1, "f"=>1, "s"=>1, "t"=>1, "w"=>1}
-Best letter for word: b
-Possible words for pattern l__e: ["lake", "late", "life", "like", "line", "live", "lone", "love"]
-Letter frequencies for possible words: {"a"=>2, "k"=>2, "t"=>1, "i"=>4, "f"=>1, "n"=>2, "v"=>2, "o"=>2}
-Best letter for word: i
-We know 1 words so guess the first one: nothing
-************* Next Turn with pattern: require/nothing/_ell/language/l__e *************
-Possible words for pattern _ell: ["bell", "cell", "fell", "sell", "tell", "well"]
-Letter frequencies for possible words: {"b"=>1, "c"=>1, "f"=>1, "s"=>1, "t"=>1, "w"=>1}
-Best letter for word: b
-Possible words for pattern l__e: ["lake", "late", "life", "like", "line", "live", "lone", "love"]
-Letter frequencies for possible words: {"a"=>2, "k"=>2, "t"=>1, "i"=>4, "f"=>1, "n"=>2, "v"=>2, "o"=>2}
-Best letter for word: i
-Guessing best letter candidate: b
-************* Next Turn with pattern: require/nothing/bell/language/l__e *************
-Possible words for pattern l__e: ["lake", "late", "life", "like", "line", "live", "lone", "love"]
-Letter frequencies for possible words: {"a"=>2, "k"=>2, "t"=>1, "i"=>4, "f"=>1, "n"=>2, "v"=>2, "o"=>2}
-Best letter for word: i
-Guessing best letter candidate: i
-************* Next Turn with pattern: require/nothing/bell/language/l__e *************
-Possible words for pattern l__e: ["lake", "late", "life", "like", "line", "live", "lone", "love"]
-Letter frequencies for possible words: {"a"=>2, "k"=>2, "t"=>1, "i"=>4, "f"=>1, "n"=>2, "v"=>2, "o"=>2}
-Best letter for word: a
-Guessing best letter candidate: a
-************* Next Turn with pattern: require/nothing/bell/language/l__e *************
-Possible words for pattern l__e: ["lake", "late", "life", "like", "line", "live", "lone", "love"]
-Letter frequencies for possible words: {"a"=>2, "k"=>2, "t"=>1, "i"=>4, "f"=>1, "n"=>2, "v"=>2, "o"=>2}
-Best letter for word: k
-Guessing best letter candidate: k
-************* Next Turn with pattern: require/nothing/bell/language/l__e *************
-Possible words for pattern l__e: ["lake", "late", "life", "like", "line", "live", "lone", "love"]
-Letter frequencies for possible words: {"a"=>2, "k"=>2, "t"=>1, "i"=>4, "f"=>1, "n"=>2, "v"=>2, "o"=>2}
-Best letter for word: v
-Guessing best letter candidate: v
-************* Next Turn with pattern: require/nothing/bell/language/l_ve *************
-Possible words for pattern l_ve: ["live", "love"]
-Letter frequencies for possible words: {"i"=>1, "o"=>1}
-Best letter for word: o
-Guessing best letter candidate: o
+************* Next Turn with pattern: __e_ *************
+Possible words for pattern __e_: ["area", "been", "deep", "does", "even", "ever", "feed", "feel", "feet", "free", "grew", "grey", "idea", "keep", "knew", "meet", "need", "open", "over", "poem", "seed", "seem", "step", "them", "then", "they", "tree", "view", "week", "when"]
+Letter frequencies for possible words: {"a"=>3, "r"=>7, "b"=>1, "e"=>15, "n"=>7, "d"=>6, "p"=>5, "o"=>4, "s"=>4, "v"=>4, "f"=>4, "l"=>1, "t"=>7, "g"=>2, "w"=>5, "y"=>2, "i"=>2, "k"=>3, "m"=>4, "h"=>4}
+Best letter for word: t
+Guessing best letter candidate: t
+************* Next Turn with pattern: _te_ *************
+Possible words for pattern _te_: ["step"]
+Letter frequencies for possible words: {"s"=>1, "p"=>1}
+Best letter for word: s
+We know all the words so guess the phrase: step

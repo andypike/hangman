@@ -17,6 +17,8 @@ describe "Game" do
       @player1.stub(:new_game)
       @player2.stub(:new_game)
       @renderer.stub(:game_frame)
+      @renderer.stub(:output)
+      @renderer.stub(:blank_line)
       @player1.stub(:take_turn) { "x" }
       @player2.stub(:take_turn) { "x" }
       @player_state = double("PlayerState")
@@ -76,7 +78,7 @@ describe "Game" do
     end
     
     it "should allow the player state to update after the turn was taken" do
-      @player1.stub(:take_turn) { "A" }
+      @player1.stub(:take_turn) { "a" }
       @player_state.should_receive(:turn_taken).with("a", "abc/def/ghi")
       @game.start(3, [@player1])      
     end

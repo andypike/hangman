@@ -21,7 +21,7 @@ class PlayerLoader
         end
       end
     end
-    
+          
     return players
   end
   

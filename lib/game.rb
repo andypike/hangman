@@ -30,7 +30,7 @@ class Game
         pause
         
         guess = state.player.take_turn(String.new(state.current_pattern))
-        state.turn_taken(guess.downcase, phrase) if guess && guess.respond_to?(:downcase)
+        state.turn_taken(guess, phrase)
         
         @renderer.game_frame(states)
       end
