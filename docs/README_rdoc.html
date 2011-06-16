@@ -60,8 +60,6 @@
 
 				<ul class="link-list">
 				
-					<li><a href="./AndysPlayer.html">AndysPlayer</a></li>
-				
 					<li><a href="./ConsoleRenderer.html">ConsoleRenderer</a></li>
 				
 					<li><a href="./ConsoleUserInput.html">ConsoleUserInput</a></li>
@@ -104,29 +102,122 @@ All you need to do is create a single file and implements a hangman player
 with the below methods. 
 </p>
 <p>
-Your class name must end with &#8220;Player&#8221; for it to be loaded by
-the game framework! Please try to make your class and file name unique in
-some way (with your team name for example).
+You should place your player file inside the &#8220;players&#8221; folder
+within the hangman game folder.
+</p>
+<p>
+Your class name * must end with &#8220;Player&#8221; * for it to be loaded
+by the game framework! Please try to make your class  and file name unique
+in some way (with your team name for example) to avoid clashes with other
+players.
 </p>
 <pre>
   # ./players/my_awesome_super_duper_hangman_player.rb
   class MyAwesomeSuperDuperHangmanPlayer
     def name
-      # Return the name of your player
+      # Return the name of your player (string)
     end
 
     def new_game(dictionary)
       # A new game has started, do any clean up from a previous game. 
-      # A word list is passed in as a string array that was used to generate the phrase to guess
+      # A word list is passed in as a string array that was used to generate the phrase to guess, e.g.: [&quot;apple&quot;, &quot;bear&quot;, &quot;cat&quot;]
     end
 
     def take_turn(pattern)
-      # It's your turn. Return a guess which can either be a letter, word or whole phrase.
-      # The state of your pattern is passed in the format s_rr__/r____s_s (underscore: missing letter, forward slash: space, letter: correctly placed)
+      # It's your turn. Return a guess (string) which can either be a letter, word or whole phrase.
+      # The state of your pattern is passed in the format &quot;s_rr__/r____s_s&quot; 
+      # The pattern is made up from - underscore: missing letter, forward slash: space, letter: correctly placed
+    end
+
+    # If your player needs supporting classes, you can nest them inside your player class.
+    # This is to keep things simple for the player loader and also to avoid clashes between players.
+    class MySupportingClass
+      # ...
     end
   end
 </pre>
 <h2>Rules</h2>
+<ol>
+<li><p>
+Matches between players will be the best of 3 games.
+</p>
+</li>
+<li><p>
+The number of words that make up the missing phrase will increase through
+the rounds.
+</p>
+</li>
+<li><p>
+If your player throws an exception, you lose the game.
+</p>
+</li>
+<li><p>
+You cannot try to gain or influence information held in the game runner app
+or other players.
+</p>
+</li>
+<li><p>
+Matches will be 1v1. The winner is the one who finds the missing phrase
+first or the one that survives longer.
+</p>
+</li>
+<li><p>
+Both players will be able to take the same number of turns, therefore no
+advantage is gained from going first.
+</p>
+</li>
+<li><p>
+Draws are possible. In the event of 3 out of 3 draws we will continue into
+sudden death until one player wins.
+</p>
+</li>
+<li><p>
+Each turn you must make a guess. Any invalid guess (nil, empty, non-string)
+will result in an incorrect guess.
+</p>
+</li>
+<li><p>
+If the game runner crashes, then a rematch will be played.
+</p>
+</li>
+<li><p>
+You player must decide the guess to make (no human interaction is allowed
+during the game).
+</p>
+</li>
+</ol>
+<h2>Running the game</h2>
+<p>
+To run the game, open a terminal/command prompt and cd to the hangman
+folder. Then type the following:
+</p>
+<pre>
+    $ ruby app.rb
+</pre>
+<p>
+This will start up the game and load the valid players from the players
+folder. You can then select two players  and start a new game. You can test
+your player as you develop it with the game runner. There are two sample
+players already in the players folder for you to play against while
+developing your player.
+</p>
+<h2>Sample Players</h2>
+<p>
+There are two sample players for you to play against and see how a very
+basic player works:
+</p>
+<h3><a href="StupidDemoPlayer.html">StupidDemoPlayer</a></h3>
+<p>
+This player will randomly select a letter from the alphabet and return it
+as it&#8217;s guess. It will track it&#8217;s guesses and will not guess
+the same letter twice in a game.
+</p>
+<h3><a href="HumanDemoPlayer.html">HumanDemoPlayer</a></h3>
+<p>
+This player has no AI, it just allows a human player to enter each guess
+for it.
+</p>
+<h2>Example game</h2>
 <p>
 TBC
 </p>

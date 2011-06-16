@@ -1,7 +1,7 @@
 # Represents the current state of a player during the game
 class PlayerState
   attr_reader :player
-  attr_reader :current_pattern
+  attr_accessor :current_pattern
   attr_reader :correct_guesses
   attr_reader :incorrect_guesses
   attr_reader :found_phrase
@@ -25,6 +25,17 @@ class PlayerState
       @incorrect_guesses << "[empty]"
     else
       guess = guess.downcase
+      
+      if guess.size > 1 && guess.size < phrase.size
+        # This is a word guess, do not allow part of a word guesses
+        words = phrase.split("/")
+        matching_words = words.select {|w| w == guess}
+        if matching_words.size == 0
+          @incorrect_guesses << guess
+          return
+        end
+      end
+      
       matches = phrase.all_indices(guess)
     
       if matches.empty?

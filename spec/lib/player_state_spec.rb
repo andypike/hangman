@@ -38,6 +38,25 @@ describe "PlayerState" do
       @state.current_pattern.should == "abc/___/abc"
     end
     
+    it "should not update the player's pattern with any start of a whole word" do
+      @phrase.stub(:all_indices).and_return([0, 8])
+      @state.turn_taken("ab", @phrase)
+      @state.current_pattern.should == "___/___/___"
+    end
+    
+    it "should not update the player's pattern with any end of a whole word" do
+      @phrase.stub(:all_indices).and_return([1, 9])
+      @state.turn_taken("bc", @phrase)
+      @state.current_pattern.should == "___/___/___"
+    end
+    
+    it "should not update the player's pattern with any part of a whole word" do
+      @phrase.stub(:all_indices).and_return([4])
+      @state.current_pattern = "_____________"
+      @state.turn_taken("isaph", "thisisaphrase")
+      @state.current_pattern.should == "_____________"
+    end
+    
     it "should update the player's pattern with a correctly matching whole phrase" do
       @phrase.stub(:all_indices).and_return([0])
       @state.turn_taken("abc/xyz/abc", @phrase)
