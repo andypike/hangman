@@ -11,7 +11,12 @@ describe "PlayerState" do
   context "processing a turn taken by a player" do
     it "should lowercase and find if the guess is within the phrase" do
       @phrase.should_receive(:all_indices).with("a").and_return([])
-      @state.turn_taken("a", @phrase)
+      @state.turn_taken("A", @phrase)
+    end
+    
+    it "should replace spaces with forward slashes and find if the guess is within the phrase" do
+      @phrase.should_receive(:all_indices).with("this/is/my/guess").and_return([])
+      @state.turn_taken("this is my guess", @phrase)
     end
     
     it "should record any incorrect guesses" do

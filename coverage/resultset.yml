@@ -419,25 +419,25 @@ RSpec:
     - 
     - 
     - 1
-    - 38
-    - 38
-    - 38
-    - 38
-    - 38
+    - 39
+    - 39
+    - 39
+    - 39
+    - 39
     - 
     - 
     - 
+    - 1
+    - 15
     - 1
     - 14
     - 1
     - 13
     - 1
+    - 
     - 12
-    - 1
     - 
-    - 11
-    - 
-    - 11
+    - 12
     - 
     - 4
     - 14
@@ -447,10 +447,10 @@ RSpec:
     - 
     - 
     - 
-    - 8
+    - 9
     - 
-    - 8
-    - 2
+    - 9
+    - 3
     - 
     - 6
     - 
@@ -482,7 +482,7 @@ RSpec:
     - 3
     - 
     - 
-  :created_at: 2011-06-16 23:37:11.801678 +01:00
+  :created_at: 2011-06-20 23:05:12.952487 +01:00
 /Users/andy/.rvm/gems/ruby-1.9.2-p180/bin/rspec spec: 
   :original_result: 
     /Users/andy/Documents/Ruby/hangman2/lib/console_renderer.rb: 
@@ -903,26 +903,25 @@ RSpec:
     - 
     - 
     - 1
-    - 38
-    - 38
-    - 38
-    - 38
-    - 38
+    - 39
+    - 39
+    - 39
+    - 39
+    - 39
     - 
     - 
     - 
+    - 1
+    - 15
     - 1
     - 14
     - 1
     - 13
     - 1
+    - 
     - 12
-    - 1
     - 
-    - 11
-    - 
-    - 11
-    - 
+    - 12
     - 
     - 4
     - 14
@@ -932,10 +931,10 @@ RSpec:
     - 
     - 
     - 
-    - 8
+    - 9
     - 
-    - 8
-    - 2
+    - 9
+    - 3
     - 
     - 6
     - 
@@ -967,7 +966,7 @@ RSpec:
     - 3
     - 
     - 
-  :created_at: 2011-06-16 20:19:39.325353 +01:00
+  :created_at: 2011-06-20 23:04:26.666133 +01:00
 "/Users/andy/.rvm/gems/ruby-1.9.2-p180/bin/rspec ": 
   :original_result: 
     /Users/andy/Documents/Ruby/hangman2/lib/console_renderer.rb: 

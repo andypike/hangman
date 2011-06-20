@@ -106,9 +106,9 @@ You should place your player file inside the &#8220;players&#8221; folder
 within the hangman game folder.
 </p>
 <p>
-Your class name * must end with &#8220;Player&#8221; * for it to be loaded
-by the game framework! Please try to make your class  and file name unique
-in some way (with your team name for example) to avoid clashes with other
+Your class name must end with &#8220;Player&#8221; for it to be loaded by
+the game framework! Please try to make your class  and file name unique in
+some way (with your team name for example) to avoid clashes with other
 players.
 </p>
 <pre>
@@ -119,14 +119,14 @@ players.
     end
 
     def new_game(dictionary)
-      # A new game has started, do any clean up from a previous game. 
-      # A word list is passed in as a string array that was used to generate the phrase to guess, e.g.: [&quot;apple&quot;, &quot;bear&quot;, &quot;cat&quot;]
+      # A new game has started, do any clean up from a previous game and initialise for this one. 
+      # The dictionary that was used to select words to generate the phrase to guess is passed in as a string array: [&quot;apple&quot;, &quot;bear&quot;, &quot;cat&quot;]
     end
 
     def take_turn(pattern)
       # It's your turn. Return a guess (string) which can either be a letter, word or whole phrase.
-      # The state of your pattern is passed in the format &quot;s_rr__/r____s_s&quot; 
-      # The pattern is made up from - underscore: missing letter, forward slash: space, letter: correctly placed
+      # The current state of your pattern is passed in the format &quot;s_rr__/r____s_s&quot; 
+      # The pattern is made up from: underscore = missing letter, forward slash = space, letter = correctly placed
     end
 
     # If your player needs supporting classes, you can nest them inside your player class.
@@ -136,63 +136,13 @@ players.
     end
   end
 </pre>
-<h2>Rules</h2>
-<ol>
-<li><p>
-Matches between players will be the best of 3 games.
-</p>
-</li>
-<li><p>
-The number of words that make up the missing phrase will increase through
-the rounds.
-</p>
-</li>
-<li><p>
-If your player throws an exception, you lose the game.
-</p>
-</li>
-<li><p>
-You cannot try to gain or influence information held in the game runner app
-or other players.
-</p>
-</li>
-<li><p>
-Matches will be 1v1. The winner is the one who finds the missing phrase
-first or the one that survives longer.
-</p>
-</li>
-<li><p>
-Both players will be able to take the same number of turns, therefore no
-advantage is gained from going first.
-</p>
-</li>
-<li><p>
-Draws are possible. In the event of 3 out of 3 draws we will continue into
-sudden death until one player wins.
-</p>
-</li>
-<li><p>
-Each turn you must make a guess. Any invalid guess (nil, empty, non-string)
-will result in an incorrect guess.
-</p>
-</li>
-<li><p>
-If the game runner crashes, then a rematch will be played.
-</p>
-</li>
-<li><p>
-You player must decide the guess to make (no human interaction is allowed
-during the game).
-</p>
-</li>
-</ol>
 <h2>Running the game</h2>
 <p>
 To run the game, open a terminal/command prompt and cd to the hangman
 folder. Then type the following:
 </p>
 <pre>
-    $ ruby app.rb
+  ruby app.rb
 </pre>
 <p>
 This will start up the game and load the valid players from the players
@@ -200,6 +150,49 @@ folder. You can then select two players  and start a new game. You can test
 your player as you develop it with the game runner. There are two sample
 players already in the players folder for you to play against while
 developing your player.
+</p>
+<h2>Guessing</h2>
+<p>
+When you return your guess from the <tt>take_turn</tt> method, you can
+return a single character, a word or the whole phrase. If your guess is
+incorrect then you are one step closer to death! If however, your guess is
+correct then it is inserted into your current pattern (replacing the
+underscores) which is passed into the <tt>take_turn</tt> method next time
+round. Your guesses are isolated from  your opponent. Here are some
+examples:
+</p>
+<h3>Single character guesses</h3>
+<pre>
+  1. Given the phrase &quot;toy/story&quot;
+  2. The pattern &quot;___/_____&quot; is passed into take_turn
+  3. If take_turn returns the single character string &quot;o&quot;
+  4. The next time take_turn is called, it is passed &quot;_o_/__o__&quot;
+  5. If take_turn returns &quot;z&quot;, the next call to take_turn is passed &quot;_o_/__o__&quot;
+</pre>
+<h3>Word guesses</h3>
+<pre>
+  1. Given the phrase &quot;toy/story&quot;
+  2. The pattern &quot;___/_____&quot; is passed into take_turn
+  3. If take_turn returns the word string &quot;toy&quot;
+  4. The next time take_turn is called, it is passed &quot;toy/_____&quot;
+  5. Notice that only the word is replaced, not all letters in that word that appear elsewhere.
+</pre>
+<h3>Whole phrase guesses</h3>
+<pre>
+  1. Given the phrase &quot;toy/story&quot;
+  2. The pattern &quot;___/_____&quot; is passed into take_turn
+  3. If take_turn returns the phrase string &quot;toy/story&quot;
+  4. Then you will win the game (provided your opponent doesn't guess the whole phrase at the same time).
+</pre>
+<h3>Invalid guesses</h3>
+<pre>
+  1. Returning nil is an invalid guess
+  2. Returning a non-string instance is an invalid guess
+  3. Returning an empty string is an invalid guess
+</pre>
+<p>
+All invalid guesses will count as an incorrect guess and will add a section
+to your gallows.
 </p>
 <h2>Sample Players</h2>
 <p>
@@ -217,10 +210,18 @@ the same letter twice in a game.
 This player has no AI, it just allows a human player to enter each guess
 for it.
 </p>
-<h2>Example game</h2>
-<p>
-TBC
-</p>
+<h2>Rules</h2>
+<pre>
+  1. Matches between players will be the best of 3 games.
+  2. The number of words that make up the missing phrase will increase through the rounds.
+  3. If your player throws an exception, you lose the game.
+  4. You cannot try to gain or influence information held in the game runner app or other players.
+  5. Matches will be 1v1. The winner is the one who finds the missing phrase first or the one that survives longer.
+  6. Both players will be able to take the same number of turns, therefore no advantage is gained from going first.
+  7. Draws are possible. In the event of 3 out of 3 draws we will continue into sudden death until one player wins (or we get bored, where we will split up the players).
+  8. Each turn you must make a guess. Any invalid guess (nil, empty, non-string) will result in an incorrect guess.
+  9. If the game runner crashes, then a rematch will be played.
+  10. Your player must decide the guess to make (no human or other system interaction is allowed during the game).</pre>
 
 	</div>
 
