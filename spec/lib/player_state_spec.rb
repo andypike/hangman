@@ -19,6 +19,11 @@ describe "PlayerState" do
       @state.turn_taken("this is my guess", @phrase)
     end
     
+    it "should trim whitespace from the start and end of guesses" do
+      @phrase.should_receive(:all_indices).with("a").and_return([])
+      @state.turn_taken(" a ", @phrase)
+    end
+    
     it "should record any incorrect guesses" do
       @phrase.stub(:all_indices).and_return([])
       @state.turn_taken("a", @phrase)

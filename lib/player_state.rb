@@ -24,8 +24,8 @@ class PlayerState
     elsif guess.empty?
       @incorrect_guesses << "[empty]"
     else
-      guess = guess.downcase.gsub(/ /, "/")
-      
+      guess = guess.downcase.strip.gsub(/ /, "/")
+
       if guess.size > 1 && guess.size < phrase.size
         # This is a word guess, do not allow part of a word guesses
         words = phrase.split("/")
