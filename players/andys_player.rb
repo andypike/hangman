@@ -39,22 +39,36 @@ class AndysPlayer
       single_words = single_words.map { |w| w.possible_words.first }
       if single_words.size == words.size
         phrase_guess = single_words.join("/")
-        log.write "We know all the words so guess the phrase: #{phrase_guess}\n"
+        log.write "We know all the words so guess the phrase: #{phrase_guess}.\n"
         @previous_guesses << phrase_guess
       elsif single_words.size > 0
-        log.write "We know #{single_words.size} words so guess the first one: #{single_words.first}\n"
+        log.write "We know #{single_words.size} words so guess the first one: #{single_words.first}.\n"
         @previous_guesses << single_words.first
       else
-        #Can't guess a word or phrase yet to guess the best letter
+        log.write "Can't guess a word or phrase yet so guess the best letter from all best word letters.\n"
+        log.write "Best letters: #{best_letters}.\n"
+        log.write "Best letter unique values: #{best_letters.values.uniq}.\n"
+        
         best_letter = ""
-        best_letter_count = 0
-        best_letters.each_pair do |letter, count|
-          if count > best_letter_count
-            best_letter = letter
-            best_letter_count = count
+        if best_letters.values.uniq.size == 1
+          log.write "All the letters remaining have the same weighing. Use the English letter frequencies to select the highest.\n"
+          %w{e t a o i n s r h d l u c m f y w g p b v k x q j z}.each do |letter|
+            if best_letters[letter] != nil
+              best_letter = letter
+              break
+            end
+          end
+        else        
+          log.write "There are different letter weightings for the possible letter remaining, use the highest"
+          best_letter_count = 0
+          best_letters.each_pair do |letter, count|
+            if count > best_letter_count
+              best_letter = letter
+              best_letter_count = count
+            end
           end
         end
-    
+        
         log.write "Guessing best letter candidate: #{best_letter}\n"
     
         @previous_guesses << best_letter

@@ -60,6 +60,20 @@
 
 				<ul class="link-list">
 				
+					<li><a href="./LateNightCaffeinePlayer.html">LateNightCaffeinePlayer</a></li>
+				
+					<li><a href="./LateNightCaffeinePlayer/U.html">LateNightCaffeinePlayer::U</a></li>
+				
+					<li><a href="./LateNightCaffeinePlayer/WordPattern.html">LateNightCaffeinePlayer::WordPattern</a></li>
+				
+					<li><a href="./LukeSquaredAndGeoffPlayer.html">LukeSquaredAndGeoffPlayer</a></li>
+				
+					<li><a href="./LukeSquaredAndGeoffPlayer/WordPattern.html">LukeSquaredAndGeoffPlayer::WordPattern</a></li>
+				
+					<li><a href="./UnicornsAndHipposPlayer.html">UnicornsAndHipposPlayer</a></li>
+				
+					<li><a href="./UnicornsAndHipposPlayer/Dictionary.html">UnicornsAndHipposPlayer::Dictionary</a></li>
+				
 					<li><a href="./ConsoleRenderer.html">ConsoleRenderer</a></li>
 				
 					<li><a href="./ConsoleUserInput.html">ConsoleUserInput</a></li>
@@ -74,7 +88,13 @@
 				
 					<li><a href="./Hangman.html">Hangman</a></li>
 				
+					<li><a href="./HardOfThinkingPlayer.html">HardOfThinkingPlayer</a></li>
+				
 					<li><a href="./HumanDemoPlayer.html">HumanDemoPlayer</a></li>
+				
+					<li><a href="./KyanTriceratopsPlayer.html">KyanTriceratopsPlayer</a></li>
+				
+					<li><a href="./MarkEmblingPlayer.html">MarkEmblingPlayer</a></li>
 				
 					<li><a href="./PhraseGenerator.html">PhraseGenerator</a></li>
 				
@@ -85,6 +105,12 @@
 					<li><a href="./String.html">String</a></li>
 				
 					<li><a href="./StupidDemoPlayer.html">StupidDemoPlayer</a></li>
+				
+					<li><a href="./TeamVelociraptorPlayer.html">TeamVelociraptorPlayer</a></li>
+				
+					<li><a href="./ThreeDayMonkFuzzyPlayer.html">ThreeDayMonkFuzzyPlayer</a></li>
+				
+					<li><a href="./ThreeDayMonkPlayer.html">ThreeDayMonkPlayer</a></li>
 				
 				</ul>
 				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
@@ -98,8 +124,8 @@
 		<h1>Surrey Rubyists Coding Competition: <a href="Hangman.html">Hangman</a></h1>
 <h2>Player Class</h2>
 <p>
-All you need to do is create a single file and implements a hangman player
-with the below methods. 
+All you need to do is create a single file and implement a new hangman
+player class with the below methods. 
 </p>
 <p>
 You should place your player file inside the &#8220;players&#8221; folder
@@ -120,7 +146,7 @@ players.
 
     def new_game(dictionary)
       # A new game has started, do any clean up from a previous game and initialise for this one. 
-      # The dictionary that was used to select words to generate the phrase to guess is passed in as a string array: [&quot;apple&quot;, &quot;bear&quot;, &quot;cat&quot;]
+      # The dictionary passed is the full set of words that the phrase is selected from and is passed in as a string array: [&quot;apple&quot;, &quot;bear&quot;, &quot;cat&quot;]
     end
 
     def take_turn(pattern)
@@ -154,12 +180,12 @@ developing your player.
 <h2>Guessing</h2>
 <p>
 When you return your guess from the <tt>take_turn</tt> method, you can
-return a single character, a word or the whole phrase. If your guess is
-incorrect then you are one step closer to death! If however, your guess is
-correct then it is inserted into your current pattern (replacing the
-underscores) which is passed into the <tt>take_turn</tt> method next time
-round. Your guesses are isolated from  your opponent. Here are some
-examples:
+return a single character, a single word (not multiple words) or the whole
+phrase. If your guess is incorrect then you are one step closer to death!
+If however, your guess is correct then it is inserted into your current
+pattern (replacing the underscores) which is passed into your
+<tt>take_turn</tt> method next time round. Your guesses are isolated from 
+your opponent. Here are some examples:
 </p>
 <h3>Single character guesses</h3>
 <pre>
@@ -175,13 +201,13 @@ examples:
   2. The pattern &quot;___/_____&quot; is passed into take_turn
   3. If take_turn returns the word string &quot;toy&quot;
   4. The next time take_turn is called, it is passed &quot;toy/_____&quot;
-  5. Notice that only the word is replaced, not all letters in that word that appear elsewhere.
+  5. Notice that only the word is replaced, not all letters in that word that appear elsewhere (t, o and y in the above example).
 </pre>
 <h3>Whole phrase guesses</h3>
 <pre>
   1. Given the phrase &quot;toy/story&quot;
   2. The pattern &quot;___/_____&quot; is passed into take_turn
-  3. If take_turn returns the phrase string &quot;toy/story&quot;
+  3. If take_turn returns the phrase string &quot;toy/story&quot; (note to pass forward slashes to separate words)
   4. Then you will win the game (provided your opponent doesn't guess the whole phrase at the same time).
 </pre>
 <h3>Invalid guesses</h3>
@@ -189,6 +215,7 @@ examples:
   1. Returning nil is an invalid guess
   2. Returning a non-string instance is an invalid guess
   3. Returning an empty string is an invalid guess
+  4. Returning multiple words that are not the whole phrase is an invalid guess.
 </pre>
 <p>
 All invalid guesses will count as an incorrect guess and will add a section
@@ -221,7 +248,13 @@ for it.
   7. Draws are possible. In the event of 3 out of 3 draws we will continue into sudden death until one player wins (or we get bored, where we will split up the players).
   8. Each turn you must make a guess. Any invalid guess (nil, empty, non-string) will result in an incorrect guess.
   9. If the game runner crashes, then a rematch will be played.
-  10. Your player must decide the guess to make (no human or other system interaction is allowed during the game).</pre>
+  10. Your player must decide the guess to make (no human or other system interaction is allowed during the game).
+</pre>
+<h2>Good Luck!</h2>
+<p>
+You will have about 2 hours to complete your player before the games start.
+If you have any questions just shout!
+</p>
 
 	</div>
 

@@ -175,7 +175,6 @@ division
 doctor
 does
 dollar
-don't
 done
 door
 double
@@ -771,7 +770,7 @@ triangle
 trip
 trouble
 truck
-true .
+true
 tube
 turn
 twenty
@@ -830,7 +829,6 @@ wish
 with
 woman
 women
-won't
 wonder
 wood
 word

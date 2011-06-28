@@ -2,7 +2,7 @@
 
 == Player Class
 
-All you need to do is create a single file and implements a hangman player with the below methods. 
+All you need to do is create a single file and implement a new hangman player class with the below methods. 
 
 You should place your player file inside the "players" folder within the hangman game folder.
 
@@ -17,7 +17,7 @@ and file name unique in some way (with your team name for example) to avoid clas
 
     def new_game(dictionary)
       # A new game has started, do any clean up from a previous game and initialise for this one. 
-      # The dictionary that was used to select words to generate the phrase to guess is passed in as a string array: ["apple", "bear", "cat"]
+      # The dictionary passed is the full set of words that the phrase is selected from and is passed in as a string array: ["apple", "bear", "cat"]
     end
 
     def take_turn(pattern)
@@ -45,8 +45,8 @@ already in the players folder for you to play against while developing your play
 
 == Guessing
 
-When you return your guess from the +take_turn+ method, you can return a single character, a word or the whole phrase. If your guess is incorrect then you are one step closer to death!
-If however, your guess is correct then it is inserted into your current pattern (replacing the underscores) which is passed into the +take_turn+ method next time round. Your guesses are isolated from 
+When you return your guess from the +take_turn+ method, you can return a single character, a single word (not multiple words) or the whole phrase. If your guess is incorrect then you are one step closer to death!
+If however, your guess is correct then it is inserted into your current pattern (replacing the underscores) which is passed into your +take_turn+ method next time round. Your guesses are isolated from 
 your opponent. Here are some examples:
 
 === Single character guesses
@@ -63,13 +63,13 @@ your opponent. Here are some examples:
   2. The pattern "___/_____" is passed into take_turn
   3. If take_turn returns the word string "toy"
   4. The next time take_turn is called, it is passed "toy/_____"
-  5. Notice that only the word is replaced, not all letters in that word that appear elsewhere.
+  5. Notice that only the word is replaced, not all letters in that word that appear elsewhere (t, o and y in the above example).
 
 === Whole phrase guesses
 
   1. Given the phrase "toy/story"
   2. The pattern "___/_____" is passed into take_turn
-  3. If take_turn returns the phrase string "toy/story"
+  3. If take_turn returns the phrase string "toy/story" (note to pass forward slashes to separate words)
   4. Then you will win the game (provided your opponent doesn't guess the whole phrase at the same time).
 
 === Invalid guesses
@@ -77,6 +77,7 @@ your opponent. Here are some examples:
   1. Returning nil is an invalid guess
   2. Returning a non-string instance is an invalid guess
   3. Returning an empty string is an invalid guess
+  4. Returning multiple words that are not the whole phrase is an invalid guess.
 
 All invalid guesses will count as an incorrect guess and will add a section to your gallows.
 
@@ -104,3 +105,7 @@ This player has no AI, it just allows a human player to enter each guess for it.
   8. Each turn you must make a guess. Any invalid guess (nil, empty, non-string) will result in an incorrect guess.
   9. If the game runner crashes, then a rematch will be played.
   10. Your player must decide the guess to make (no human or other system interaction is allowed during the game).
+
+== Good Luck!
+
+You will have about 2 hours to complete your player before the games start. If you have any questions just shout!

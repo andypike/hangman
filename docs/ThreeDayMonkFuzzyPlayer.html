@@ -5,7 +5,7 @@
 <head>
 	<meta content="text/html; charset=utf-8" http-equiv="Content-Type" />
 
-	<title>Class: HumanDemoPlayer</title>
+	<title>Class: ThreeDayMonkFuzzyPlayer</title>
 
 	<link rel="stylesheet" href="./rdoc.css" type="text/css" media="screen" />
 
@@ -38,8 +38,8 @@
 				<div class="section-body">
 					<ul>
 					
-						<li><a href="./players/human_demo_player_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
-							class="thickbox" title="players/human_demo_player.rb">players/human_demo_player.rb</a></li>
+						<li><a href="./players/threedaymonk_rb.html?TB_iframe=true&amp;height=550&amp;width=785"
+							class="thickbox" title="players/threedaymonk.rb">players/threedaymonk.rb</a></li>
 					
 					</ul>
 				</div>
@@ -55,7 +55,7 @@
 			<div id="parent-class-section" class="section">
 				<h3 class="section-header">Parent</h3>
 				
-				<p class="link">Object</p>
+				<p class="link"><a href="ThreeDayMonkPlayer.html">ThreeDayMonkPlayer</a></p>
 				
 			</div>
 			
@@ -69,11 +69,11 @@
 				<h3 class="section-header">Methods</h3>
 				<ul class="link-list">
 					
+					<li><a href="#method-i-best">#best</a></li>
+					
 					<li><a href="#method-i-name">#name</a></li>
 					
-					<li><a href="#method-i-new_game">#new_game</a></li>
-					
-					<li><a href="#method-i-take_turn">#take_turn</a></li>
+					<li><a href="#method-i-threshold">#threshold</a></li>
 					
 				</ul>
 			</div>
@@ -172,14 +172,10 @@
 	</div>
 
 	<div id="documentation">
-		<h1 class="class">HumanDemoPlayer</h1>
+		<h1 class="class">ThreeDayMonkFuzzyPlayer</h1>
 
 		<div id="description">
-			<p>
-Demo player: Allows a human to enter the guess per turn. Please note that
-the class name ends with the word &#8220;Player&#8221; to enable loading.
-</p>
-
+			
 		</div>
 
 		<!-- Constants -->
@@ -207,19 +203,17 @@ the class name ends with the word &#8220;Player&#8221; to enable loading.
 
 				<div class="method-description">
 					
-					<p>
-Returns this players name.
-</p>
+					
 					
 
 					
 					<div class="method-source-code"
 						id="name-source">
 <pre>
-   <span class="ruby-comment cmt"># File players/human_demo_player.rb, line 4</span>
-4:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
-5:     <span class="ruby-value str">&quot;Human Demo Player&quot;</span>
-6:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File players/threedaymonk.rb, line 97</span>
+97:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">name</span>
+98:     <span class="ruby-value str">&quot;threedaymonk (fuzzy)&quot;</span>
+99:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -230,31 +224,36 @@ Returns this players name.
 			</div>
 
 		
-			<div id="new-game-method" class="method-detail ">
-				<a name="method-i-new_game"></a>
+		</div>
+	
+		<div id="private-instance-method-details" class="method-section section">
+			<h3 class="section-header">Private Instance Methods</h3>
+
+		
+			<div id="best-method" class="method-detail ">
+				<a name="method-i-best"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">new_game</span><span
-						class="method-args">(dictionary)</span>
+					<span class="method-name">best</span><span
+						class="method-args">(a)</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
 
 				<div class="method-description">
 					
-					<p>
-Prepares for a new game (no action required for this player).
-</p>
+					
 					
 
 					
 					<div class="method-source-code"
-						id="new-game-source">
+						id="best-source">
 <pre>
-    <span class="ruby-comment cmt"># File players/human_demo_player.rb, line 9</span>
- 9:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">new_game</span>(<span class="ruby-identifier">dictionary</span>)
-10:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File players/threedaymonk.rb, line 102</span>
+102:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">best</span>(<span class="ruby-identifier">a</span>)
+103:     <span class="ruby-identifier">a</span>[<span class="ruby-identifier">rand</span>([<span class="ruby-value">2</span>, <span class="ruby-identifier">a</span>.<span class="ruby-identifier">length</span>].<span class="ruby-identifier">min</span>)]
+104:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -265,33 +264,30 @@ Prepares for a new game (no action required for this player).
 			</div>
 
 		
-			<div id="take-turn-method" class="method-detail ">
-				<a name="method-i-take_turn"></a>
+			<div id="threshold-method" class="method-detail ">
+				<a name="method-i-threshold"></a>
 
 				<div class="method-heading">
 				
-					<span class="method-name">take_turn</span><span
-						class="method-args">(pattern)</span>
+					<span class="method-name">threshold</span><span
+						class="method-args">()</span>
 					<span class="method-click-advice">click to toggle source</span>
 				
 				</div>
 
 				<div class="method-description">
 					
-					<p>
-For each turn, show a prompt to the user and return what was typed.
-</p>
+					
 					
 
 					
 					<div class="method-source-code"
-						id="take-turn-source">
+						id="threshold-source">
 <pre>
-    <span class="ruby-comment cmt"># File players/human_demo_player.rb, line 13</span>
-13:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">take_turn</span>(<span class="ruby-identifier">pattern</span>)    
-14:     <span class="ruby-identifier">puts</span> <span class="ruby-value str">&quot;Human player, please enter your guess:&quot;</span>
-15:     <span class="ruby-identifier">gets</span>.<span class="ruby-identifier">chomp!</span>
-16:   <span class="ruby-keyword kw">end</span></pre>
+     <span class="ruby-comment cmt"># File players/threedaymonk.rb, line 106</span>
+106:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">threshold</span>
+107:     <span class="ruby-value">3</span>
+108:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

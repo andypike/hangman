@@ -26,8 +26,8 @@
 		
 <h2>Player Class</h2>
 <p>
-All you need to do is create a single file and implements a hangman player
-with the below methods. 
+All you need to do is create a single file and implement a new hangman
+player class with the below methods. 
 </p>
 <p>
 You should place your player file inside the &#8220;players&#8221; folder
@@ -48,7 +48,7 @@ players.
 
     def new_game(dictionary)
       # A new game has started, do any clean up from a previous game and initialise for this one. 
-      # The dictionary that was used to select words to generate the phrase to guess is passed in as a string array: [&quot;apple&quot;, &quot;bear&quot;, &quot;cat&quot;]
+      # The dictionary passed is the full set of words that the phrase is selected from and is passed in as a string array: [&quot;apple&quot;, &quot;bear&quot;, &quot;cat&quot;]
     end
 
     def take_turn(pattern)
@@ -82,12 +82,12 @@ developing your player.
 <h2>Guessing</h2>
 <p>
 When you return your guess from the <tt>take_turn</tt> method, you can
-return a single character, a word or the whole phrase. If your guess is
-incorrect then you are one step closer to death! If however, your guess is
-correct then it is inserted into your current pattern (replacing the
-underscores) which is passed into the <tt>take_turn</tt> method next time
-round. Your guesses are isolated from  your opponent. Here are some
-examples:
+return a single character, a single word (not multiple words) or the whole
+phrase. If your guess is incorrect then you are one step closer to death!
+If however, your guess is correct then it is inserted into your current
+pattern (replacing the underscores) which is passed into your
+<tt>take_turn</tt> method next time round. Your guesses are isolated from 
+your opponent. Here are some examples:
 </p>
 <h3>Single character guesses</h3>
 <pre>
@@ -103,13 +103,13 @@ examples:
   2. The pattern &quot;___/_____&quot; is passed into take_turn
   3. If take_turn returns the word string &quot;toy&quot;
   4. The next time take_turn is called, it is passed &quot;toy/_____&quot;
-  5. Notice that only the word is replaced, not all letters in that word that appear elsewhere.
+  5. Notice that only the word is replaced, not all letters in that word that appear elsewhere (t, o and y in the above example).
 </pre>
 <h3>Whole phrase guesses</h3>
 <pre>
   1. Given the phrase &quot;toy/story&quot;
   2. The pattern &quot;___/_____&quot; is passed into take_turn
-  3. If take_turn returns the phrase string &quot;toy/story&quot;
+  3. If take_turn returns the phrase string &quot;toy/story&quot; (note to pass forward slashes to separate words)
   4. Then you will win the game (provided your opponent doesn't guess the whole phrase at the same time).
 </pre>
 <h3>Invalid guesses</h3>
@@ -117,6 +117,7 @@ examples:
   1. Returning nil is an invalid guess
   2. Returning a non-string instance is an invalid guess
   3. Returning an empty string is an invalid guess
+  4. Returning multiple words that are not the whole phrase is an invalid guess.
 </pre>
 <p>
 All invalid guesses will count as an incorrect guess and will add a section
@@ -149,7 +150,13 @@ for it.
   7. Draws are possible. In the event of 3 out of 3 draws we will continue into sudden death until one player wins (or we get bored, where we will split up the players).
   8. Each turn you must make a guess. Any invalid guess (nil, empty, non-string) will result in an incorrect guess.
   9. If the game runner crashes, then a rematch will be played.
-  10. Your player must decide the guess to make (no human or other system interaction is allowed during the game).</pre>
+  10. Your player must decide the guess to make (no human or other system interaction is allowed during the game).
+</pre>
+<h2>Good Luck!</h2>
+<p>
+You will have about 2 hours to complete your player before the games start.
+If you have any questions just shout!
+</p>
 
 	</div>
 	
@@ -167,6 +174,20 @@ for it.
 	<h2 id="classes">Classes/Modules</h2>
 	<ul>
 		
+		<li class="class"><a href="LateNightCaffeinePlayer.html">LateNightCaffeinePlayer</a></li>
+		
+		<li class="module"><a href="LateNightCaffeinePlayer/U.html">LateNightCaffeinePlayer::U</a></li>
+		
+		<li class="class"><a href="LateNightCaffeinePlayer/WordPattern.html">LateNightCaffeinePlayer::WordPattern</a></li>
+		
+		<li class="class"><a href="LukeSquaredAndGeoffPlayer.html">LukeSquaredAndGeoffPlayer</a></li>
+		
+		<li class="class"><a href="LukeSquaredAndGeoffPlayer/WordPattern.html">LukeSquaredAndGeoffPlayer::WordPattern</a></li>
+		
+		<li class="class"><a href="UnicornsAndHipposPlayer.html">UnicornsAndHipposPlayer</a></li>
+		
+		<li class="class"><a href="UnicornsAndHipposPlayer/Dictionary.html">UnicornsAndHipposPlayer::Dictionary</a></li>
+		
 		<li class="class"><a href="ConsoleRenderer.html">ConsoleRenderer</a></li>
 		
 		<li class="class"><a href="ConsoleUserInput.html">ConsoleUserInput</a></li>
@@ -181,7 +202,13 @@ for it.
 		
 		<li class="class"><a href="Hangman.html">Hangman</a></li>
 		
+		<li class="class"><a href="HardOfThinkingPlayer.html">HardOfThinkingPlayer</a></li>
+		
 		<li class="class"><a href="HumanDemoPlayer.html">HumanDemoPlayer</a></li>
+		
+		<li class="class"><a href="KyanTriceratopsPlayer.html">KyanTriceratopsPlayer</a></li>
+		
+		<li class="class"><a href="MarkEmblingPlayer.html">MarkEmblingPlayer</a></li>
 		
 		<li class="class"><a href="PhraseGenerator.html">PhraseGenerator</a></li>
 		
@@ -193,6 +220,12 @@ for it.
 		
 		<li class="class"><a href="StupidDemoPlayer.html">StupidDemoPlayer</a></li>
 		
+		<li class="class"><a href="TeamVelociraptorPlayer.html">TeamVelociraptorPlayer</a></li>
+		
+		<li class="class"><a href="ThreeDayMonkFuzzyPlayer.html">ThreeDayMonkFuzzyPlayer</a></li>
+		
+		<li class="class"><a href="ThreeDayMonkPlayer.html">ThreeDayMonkPlayer</a></li>
+		
 	</ul>
 
 	<h2 id="methods">Methods</h2>
@@ -200,15 +233,21 @@ for it.
 		
 			<li><a href="PhraseGenerator.html#method-c-generate">::generate &mdash; PhraseGenerator</a></li>
 		
-			<li><a href="Hangman.html#method-c-new">::new &mdash; Hangman</a></li>
+			<li><a href="LukeSquaredAndGeoffPlayer/WordPattern.html#method-c-new">::new &mdash; LukeSquaredAndGeoffPlayer::WordPattern</a></li>
 		
-			<li><a href="Game.html#method-c-new">::new &mdash; Game</a></li>
+			<li><a href="GameAnalyser.html#method-c-new">::new &mdash; GameAnalyser</a></li>
+		
+			<li><a href="LateNightCaffeinePlayer/WordPattern.html#method-c-new">::new &mdash; LateNightCaffeinePlayer::WordPattern</a></li>
 		
 			<li><a href="PlayerState.html#method-c-new">::new &mdash; PlayerState</a></li>
 		
-			<li><a href="ConsoleUserInput.html#method-c-new">::new &mdash; ConsoleUserInput</a></li>
+			<li><a href="UnicornsAndHipposPlayer/Dictionary.html#method-c-new">::new &mdash; UnicornsAndHipposPlayer::Dictionary</a></li>
 		
-			<li><a href="GameAnalyser.html#method-c-new">::new &mdash; GameAnalyser</a></li>
+			<li><a href="Game.html#method-c-new">::new &mdash; Game</a></li>
+		
+			<li><a href="Hangman.html#method-c-new">::new &mdash; Hangman</a></li>
+		
+			<li><a href="ConsoleUserInput.html#method-c-new">::new &mdash; ConsoleUserInput</a></li>
 		
 			<li><a href="PhraseGenerator.html#method-c-patternize">::patternize &mdash; PhraseGenerator</a></li>
 		
@@ -216,29 +255,113 @@ for it.
 		
 			<li><a href="String.html#method-i-all_indices">#all_indices &mdash; String</a></li>
 		
+			<li><a href="ThreeDayMonkFuzzyPlayer.html#method-i-best">#best &mdash; ThreeDayMonkFuzzyPlayer</a></li>
+		
+			<li><a href="ThreeDayMonkPlayer.html#method-i-best">#best &mdash; ThreeDayMonkPlayer</a></li>
+		
+			<li><a href="KyanTriceratopsPlayer.html#method-i-best_letters">#best_letters &mdash; KyanTriceratopsPlayer</a></li>
+		
 			<li><a href="ConsoleRenderer.html#method-i-blank_line">#blank_line &mdash; ConsoleRenderer</a></li>
+		
+			<li><a href="HardOfThinkingPlayer.html#method-i-chars_by_frequency_for">#chars_by_frequency_for &mdash; HardOfThinkingPlayer</a></li>
 		
 			<li><a href="PlayerLoader.html#method-i-check_method">#check_method &mdash; PlayerLoader</a></li>
 		
 			<li><a href="ConsoleRenderer.html#method-i-clear">#clear &mdash; ConsoleRenderer</a></li>
 		
+			<li><a href="UnicornsAndHipposPlayer/Dictionary.html#method-i-count">#count &mdash; UnicornsAndHipposPlayer::Dictionary</a></li>
+		
+			<li><a href="ThreeDayMonkPlayer.html#method-i-dictionary_for_turn">#dictionary_for_turn &mdash; ThreeDayMonkPlayer</a></li>
+		
+			<li><a href="LateNightCaffeinePlayer/WordPattern.html#method-i-done%3F">#done? &mdash; LateNightCaffeinePlayer::WordPattern</a></li>
+		
+			<li><a href="LukeSquaredAndGeoffPlayer/WordPattern.html#method-i-done%3F">#done? &mdash; LukeSquaredAndGeoffPlayer::WordPattern</a></li>
+		
 			<li><a href="ConsoleRenderer.html#method-i-errors">#errors &mdash; ConsoleRenderer</a></li>
+		
+			<li><a href="HardOfThinkingPlayer.html#method-i-exact_match">#exact_match &mdash; HardOfThinkingPlayer</a></li>
+		
+			<li><a href="HardOfThinkingPlayer.html#method-i-exact_matches_pattern">#exact_matches_pattern &mdash; HardOfThinkingPlayer</a></li>
+		
+			<li><a href="ThreeDayMonkPlayer.html#method-i-exact_phrase">#exact_phrase &mdash; ThreeDayMonkPlayer</a></li>
+		
+			<li><a href="KyanTriceratopsPlayer.html#method-i-expressions">#expressions &mdash; KyanTriceratopsPlayer</a></li>
+		
+			<li><a href="MarkEmblingPlayer.html#method-i-filter_words">#filter_words &mdash; MarkEmblingPlayer</a></li>
+		
+			<li><a href="ThreeDayMonkPlayer.html#method-i-find_frequencies">#find_frequencies &mdash; ThreeDayMonkPlayer</a></li>
+		
+			<li><a href="MarkEmblingPlayer.html#method-i-find_likely_letter">#find_likely_letter &mdash; MarkEmblingPlayer</a></li>
+		
+			<li><a href="TeamVelociraptorPlayer.html#method-i-frequency_hash">#frequency_hash &mdash; TeamVelociraptorPlayer</a></li>
 		
 			<li><a href="ConsoleRenderer.html#method-i-game_frame">#game_frame &mdash; ConsoleRenderer</a></li>
 		
 			<li><a href="GameAnalyser.html#method-i-game_over%3F">#game_over? &mdash; GameAnalyser</a></li>
 		
-			<li><a href="DictionaryLoader.html#method-i-load">#load &mdash; DictionaryLoader</a></li>
+			<li><a href="KyanTriceratopsPlayer.html#method-i-letter_distribution">#letter_distribution &mdash; KyanTriceratopsPlayer</a></li>
+		
+			<li><a href="TeamVelociraptorPlayer.html#method-i-letters">#letters &mdash; TeamVelociraptorPlayer</a></li>
+		
+			<li><a href="LateNightCaffeinePlayer/U.html#method-i-letters_in_words">#letters_in_words &mdash; LateNightCaffeinePlayer::U</a></li>
 		
 			<li><a href="PlayerLoader.html#method-i-load">#load &mdash; PlayerLoader</a></li>
 		
+			<li><a href="DictionaryLoader.html#method-i-load">#load &mdash; DictionaryLoader</a></li>
+		
+			<li><a href="UnicornsAndHipposPlayer/Dictionary.html#method-i-matches">#matches &mdash; UnicornsAndHipposPlayer::Dictionary</a></li>
+		
+			<li><a href="HardOfThinkingPlayer.html#method-i-matches_pattern">#matches_pattern &mdash; HardOfThinkingPlayer</a></li>
+		
+			<li><a href="HardOfThinkingPlayer.html#method-i-matches_pattern_list">#matches_pattern_list &mdash; HardOfThinkingPlayer</a></li>
+		
+			<li><a href="ThreeDayMonkPlayer.html#method-i-most_likely">#most_likely &mdash; ThreeDayMonkPlayer</a></li>
+		
+			<li><a href="HardOfThinkingPlayer.html#method-i-name">#name &mdash; HardOfThinkingPlayer</a></li>
+		
 			<li><a href="StupidDemoPlayer.html#method-i-name">#name &mdash; StupidDemoPlayer</a></li>
+		
+			<li><a href="MarkEmblingPlayer.html#method-i-name">#name &mdash; MarkEmblingPlayer</a></li>
 		
 			<li><a href="HumanDemoPlayer.html#method-i-name">#name &mdash; HumanDemoPlayer</a></li>
 		
-			<li><a href="StupidDemoPlayer.html#method-i-new_game">#new_game &mdash; StupidDemoPlayer</a></li>
+			<li><a href="KyanTriceratopsPlayer.html#method-i-name">#name &mdash; KyanTriceratopsPlayer</a></li>
+		
+			<li><a href="LateNightCaffeinePlayer.html#method-i-name">#name &mdash; LateNightCaffeinePlayer</a></li>
+		
+			<li><a href="TeamVelociraptorPlayer.html#method-i-name">#name &mdash; TeamVelociraptorPlayer</a></li>
+		
+			<li><a href="ThreeDayMonkPlayer.html#method-i-name">#name &mdash; ThreeDayMonkPlayer</a></li>
+		
+			<li><a href="ThreeDayMonkFuzzyPlayer.html#method-i-name">#name &mdash; ThreeDayMonkFuzzyPlayer</a></li>
+		
+			<li><a href="LukeSquaredAndGeoffPlayer.html#method-i-name">#name &mdash; LukeSquaredAndGeoffPlayer</a></li>
+		
+			<li><a href="UnicornsAndHipposPlayer.html#method-i-name">#name &mdash; UnicornsAndHipposPlayer</a></li>
+		
+			<li><a href="UnicornsAndHipposPlayer.html#method-i-new_game">#new_game &mdash; UnicornsAndHipposPlayer</a></li>
 		
 			<li><a href="HumanDemoPlayer.html#method-i-new_game">#new_game &mdash; HumanDemoPlayer</a></li>
+		
+			<li><a href="LukeSquaredAndGeoffPlayer.html#method-i-new_game">#new_game &mdash; LukeSquaredAndGeoffPlayer</a></li>
+		
+			<li><a href="TeamVelociraptorPlayer.html#method-i-new_game">#new_game &mdash; TeamVelociraptorPlayer</a></li>
+		
+			<li><a href="KyanTriceratopsPlayer.html#method-i-new_game">#new_game &mdash; KyanTriceratopsPlayer</a></li>
+		
+			<li><a href="LateNightCaffeinePlayer.html#method-i-new_game">#new_game &mdash; LateNightCaffeinePlayer</a></li>
+		
+			<li><a href="MarkEmblingPlayer.html#method-i-new_game">#new_game &mdash; MarkEmblingPlayer</a></li>
+		
+			<li><a href="HardOfThinkingPlayer.html#method-i-new_game">#new_game &mdash; HardOfThinkingPlayer</a></li>
+		
+			<li><a href="ThreeDayMonkPlayer.html#method-i-new_game">#new_game &mdash; ThreeDayMonkPlayer</a></li>
+		
+			<li><a href="StupidDemoPlayer.html#method-i-new_game">#new_game &mdash; StupidDemoPlayer</a></li>
+		
+			<li><a href="UnicornsAndHipposPlayer/Dictionary.html#method-i-next">#next &mdash; UnicornsAndHipposPlayer::Dictionary</a></li>
+		
+			<li><a href="HardOfThinkingPlayer.html#method-i-next_char_by_frequency">#next_char_by_frequency &mdash; HardOfThinkingPlayer</a></li>
 		
 			<li><a href="ConsoleRenderer.html#method-i-output">#output &mdash; ConsoleRenderer</a></li>
 		
@@ -246,9 +369,17 @@ for it.
 		
 			<li><a href="ConsoleRenderer.html#method-i-players_list">#players_list &mdash; ConsoleRenderer</a></li>
 		
+			<li><a href="MarkEmblingPlayer.html#method-i-populate_letters_with_frequency_in_words">#populate_letters_with_frequency_in_words &mdash; MarkEmblingPlayer</a></li>
+		
+			<li><a href="KyanTriceratopsPlayer.html#method-i-possible_words">#possible_words &mdash; KyanTriceratopsPlayer</a></li>
+		
 			<li><a href="ConsoleUserInput.html#method-i-read_number">#read_number &mdash; ConsoleUserInput</a></li>
 		
 			<li><a href="ConsoleUserInput.html#method-i-read_number_with_validation">#read_number_with_validation &mdash; ConsoleUserInput</a></li>
+		
+			<li><a href="LateNightCaffeinePlayer/WordPattern.html#method-i-regex">#regex &mdash; LateNightCaffeinePlayer::WordPattern</a></li>
+		
+			<li><a href="LukeSquaredAndGeoffPlayer/WordPattern.html#method-i-regex">#regex &mdash; LukeSquaredAndGeoffPlayer::WordPattern</a></li>
 		
 			<li><a href="PlayerLoader.html#method-i-require_player_file">#require_player_file &mdash; PlayerLoader</a></li>
 		
@@ -256,17 +387,45 @@ for it.
 		
 			<li><a href="ConsoleUserInput.html#method-i-select_players">#select_players &mdash; ConsoleUserInput</a></li>
 		
+			<li><a href="LateNightCaffeinePlayer/WordPattern.html#method-i-size">#size &mdash; LateNightCaffeinePlayer::WordPattern</a></li>
+		
+			<li><a href="LukeSquaredAndGeoffPlayer/WordPattern.html#method-i-size">#size &mdash; LukeSquaredAndGeoffPlayer::WordPattern</a></li>
+		
 			<li><a href="Hangman.html#method-i-start">#start &mdash; Hangman</a></li>
 		
 			<li><a href="Game.html#method-i-start">#start &mdash; Game</a></li>
 		
-			<li><a href="HumanDemoPlayer.html#method-i-take_turn">#take_turn &mdash; HumanDemoPlayer</a></li>
+			<li><a href="HardOfThinkingPlayer.html#method-i-take_turn">#take_turn &mdash; HardOfThinkingPlayer</a></li>
+		
+			<li><a href="TeamVelociraptorPlayer.html#method-i-take_turn">#take_turn &mdash; TeamVelociraptorPlayer</a></li>
+		
+			<li><a href="KyanTriceratopsPlayer.html#method-i-take_turn">#take_turn &mdash; KyanTriceratopsPlayer</a></li>
+		
+			<li><a href="MarkEmblingPlayer.html#method-i-take_turn">#take_turn &mdash; MarkEmblingPlayer</a></li>
+		
+			<li><a href="ThreeDayMonkPlayer.html#method-i-take_turn">#take_turn &mdash; ThreeDayMonkPlayer</a></li>
+		
+			<li><a href="LateNightCaffeinePlayer.html#method-i-take_turn">#take_turn &mdash; LateNightCaffeinePlayer</a></li>
+		
+			<li><a href="LukeSquaredAndGeoffPlayer.html#method-i-take_turn">#take_turn &mdash; LukeSquaredAndGeoffPlayer</a></li>
+		
+			<li><a href="UnicornsAndHipposPlayer.html#method-i-take_turn">#take_turn &mdash; UnicornsAndHipposPlayer</a></li>
 		
 			<li><a href="StupidDemoPlayer.html#method-i-take_turn">#take_turn &mdash; StupidDemoPlayer</a></li>
 		
+			<li><a href="HumanDemoPlayer.html#method-i-take_turn">#take_turn &mdash; HumanDemoPlayer</a></li>
+		
+			<li><a href="ThreeDayMonkFuzzyPlayer.html#method-i-threshold">#threshold &mdash; ThreeDayMonkFuzzyPlayer</a></li>
+		
+			<li><a href="ThreeDayMonkPlayer.html#method-i-threshold">#threshold &mdash; ThreeDayMonkPlayer</a></li>
+		
 			<li><a href="PlayerState.html#method-i-turn_taken">#turn_taken &mdash; PlayerState</a></li>
 		
+			<li><a href="TeamVelociraptorPlayer.html#method-i-vowels">#vowels &mdash; TeamVelociraptorPlayer</a></li>
+		
 			<li><a href="ConsoleRenderer.html#method-i-welcome">#welcome &mdash; ConsoleRenderer</a></li>
+		
+			<li><a href="ThreeDayMonkPlayer.html#method-i-wpat_regexp">#wpat_regexp &mdash; ThreeDayMonkPlayer</a></li>
 		
 	</ul>
 

@@ -119,6 +119,20 @@
 
 				<ul class="link-list">
 				
+					<li><a href="./LateNightCaffeinePlayer.html">LateNightCaffeinePlayer</a></li>
+				
+					<li><a href="./LateNightCaffeinePlayer/U.html">LateNightCaffeinePlayer::U</a></li>
+				
+					<li><a href="./LateNightCaffeinePlayer/WordPattern.html">LateNightCaffeinePlayer::WordPattern</a></li>
+				
+					<li><a href="./LukeSquaredAndGeoffPlayer.html">LukeSquaredAndGeoffPlayer</a></li>
+				
+					<li><a href="./LukeSquaredAndGeoffPlayer/WordPattern.html">LukeSquaredAndGeoffPlayer::WordPattern</a></li>
+				
+					<li><a href="./UnicornsAndHipposPlayer.html">UnicornsAndHipposPlayer</a></li>
+				
+					<li><a href="./UnicornsAndHipposPlayer/Dictionary.html">UnicornsAndHipposPlayer::Dictionary</a></li>
+				
 					<li><a href="./ConsoleRenderer.html">ConsoleRenderer</a></li>
 				
 					<li><a href="./ConsoleUserInput.html">ConsoleUserInput</a></li>
@@ -133,7 +147,13 @@
 				
 					<li><a href="./Hangman.html">Hangman</a></li>
 				
+					<li><a href="./HardOfThinkingPlayer.html">HardOfThinkingPlayer</a></li>
+				
 					<li><a href="./HumanDemoPlayer.html">HumanDemoPlayer</a></li>
+				
+					<li><a href="./KyanTriceratopsPlayer.html">KyanTriceratopsPlayer</a></li>
+				
+					<li><a href="./MarkEmblingPlayer.html">MarkEmblingPlayer</a></li>
 				
 					<li><a href="./PhraseGenerator.html">PhraseGenerator</a></li>
 				
@@ -144,6 +164,12 @@
 					<li><a href="./String.html">String</a></li>
 				
 					<li><a href="./StupidDemoPlayer.html">StupidDemoPlayer</a></li>
+				
+					<li><a href="./TeamVelociraptorPlayer.html">TeamVelociraptorPlayer</a></li>
+				
+					<li><a href="./ThreeDayMonkFuzzyPlayer.html">ThreeDayMonkFuzzyPlayer</a></li>
+				
+					<li><a href="./ThreeDayMonkPlayer.html">ThreeDayMonkPlayer</a></li>
 				
 				</ul>
 				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
@@ -283,18 +309,18 @@ Display a list of errors while loading players
 					<div class="method-source-code"
 						id="errors-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 45</span>
-45:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">errors</span>(<span class="ruby-identifier">errors</span>)
-46:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;Errors Loading Players&quot;</span>
-47:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;======================&quot;</span>
-48:     
-49:     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">error</span><span class="ruby-operator">|</span>
-50:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;* #{error}&quot;</span>
-51:     <span class="ruby-keyword kw">end</span>
-52:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;* No errors to report :o)&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">empty?</span>
-53:     
-54:     <span class="ruby-identifier">blank_line</span>
-55:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 48</span>
+48:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">errors</span>(<span class="ruby-identifier">errors</span>)
+49:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;Errors Loading Players&quot;</span>
+50:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;======================&quot;</span>
+51:     
+52:     <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">error</span><span class="ruby-operator">|</span>
+53:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;* #{error}&quot;</span>
+54:     <span class="ruby-keyword kw">end</span>
+55:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;* No errors to report :o)&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">errors</span>.<span class="ruby-identifier">empty?</span>
+56:     
+57:     <span class="ruby-identifier">blank_line</span>
+58:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -327,19 +353,19 @@ Render a frame of the game loop for the current player states
 					<div class="method-source-code"
 						id="game-frame-source">
 <pre>
-    <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 58</span>
-58:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">game_frame</span>(<span class="ruby-identifier">states</span>)
-59:     <span class="ruby-identifier">clear</span>
-60:     
-61:     <span class="ruby-identifier">states</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">state</span><span class="ruby-operator">|</span>
-62:       <span class="ruby-identifier">output</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">player</span>.<span class="ruby-identifier">name</span>
-63:       <span class="ruby-identifier">output</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">current_pattern</span>
-64:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;Correct: #{state.correct_guesses.join(' ')}&quot;</span>
-65:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;Incorrect: #{state.incorrect_guesses.join(' ')}&quot;</span>
-66:       <span class="ruby-identifier">output</span> <span class="ruby-constant">Gallows</span>.<span class="ruby-identifier">stages</span>[<span class="ruby-identifier">state</span>.<span class="ruby-identifier">incorrect_guesses</span>.<span class="ruby-identifier">count</span>]
-67:       <span class="ruby-identifier">blank_line</span>
-68:     <span class="ruby-keyword kw">end</span>
-69:   <span class="ruby-keyword kw">end</span></pre>
+    <span class="ruby-comment cmt"># File lib/console_renderer.rb, line 61</span>
+61:   <span class="ruby-keyword kw">def</span> <span class="ruby-identifier">game_frame</span>(<span class="ruby-identifier">states</span>)
+62:     <span class="ruby-identifier">clear</span>
+63:     
+64:     <span class="ruby-identifier">states</span>.<span class="ruby-identifier">each</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">state</span><span class="ruby-operator">|</span>
+65:       <span class="ruby-identifier">output</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">player</span>.<span class="ruby-identifier">name</span>
+66:       <span class="ruby-identifier">output</span> <span class="ruby-identifier">state</span>.<span class="ruby-identifier">current_pattern</span>
+67:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;Correct: #{state.correct_guesses.join(' ')}&quot;</span>
+68:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;Incorrect: #{state.incorrect_guesses.join(' ')}&quot;</span>
+69:       <span class="ruby-identifier">output</span> <span class="ruby-constant">Gallows</span>.<span class="ruby-identifier">stages</span>[<span class="ruby-identifier">state</span>.<span class="ruby-identifier">incorrect_guesses</span>.<span class="ruby-identifier">count</span>]
+70:       <span class="ruby-identifier">blank_line</span>
+71:     <span class="ruby-keyword kw">end</span>
+72:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>
@@ -413,13 +439,16 @@ From a list of loaded player classes, display their names
 33:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;Loaded Players&quot;</span>
 34:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;==============&quot;</span>
 35:     
-36:     <span class="ruby-identifier">players</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">player</span>, <span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
-37:       <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;#{x + 1}: #{player.new.name}&quot;</span>
-38:     <span class="ruby-keyword kw">end</span>
-39:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;* No players loaded :o(&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">players</span>.<span class="ruby-identifier">empty?</span>
-40:     
-41:     <span class="ruby-identifier">blank_line</span>
-42:   <span class="ruby-keyword kw">end</span></pre>
+36:     <span class="ruby-constant">File</span>.<span class="ruby-identifier">open</span>(<span class="ruby-value str">&quot;log.txt&quot;</span>, <span class="ruby-value str">'a'</span>) <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">log</span><span class="ruby-operator">|</span>
+37:       <span class="ruby-identifier">players</span>.<span class="ruby-identifier">each_with_index</span> <span class="ruby-keyword kw">do</span> <span class="ruby-operator">|</span><span class="ruby-identifier">player</span>, <span class="ruby-identifier">x</span><span class="ruby-operator">|</span>
+38:         <span class="ruby-identifier">output</span> <span class="ruby-node">&quot;#{x + 1}: #{player.new.name}&quot;</span>
+39:         <span class="ruby-identifier">log</span>.<span class="ruby-identifier">write</span> <span class="ruby-node">&quot;#{x + 1}: #{player.new.name}\r&quot;</span>
+40:       <span class="ruby-keyword kw">end</span>
+41:     <span class="ruby-keyword kw">end</span> 
+42:     <span class="ruby-identifier">output</span> <span class="ruby-value str">&quot;* No players loaded :o(&quot;</span> <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">players</span>.<span class="ruby-identifier">empty?</span>
+43:     
+44:     <span class="ruby-identifier">blank_line</span>
+45:   <span class="ruby-keyword kw">end</span></pre>
 					</div>
 					
 				</div>

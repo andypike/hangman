@@ -109,6 +109,20 @@
 
 				<ul class="link-list">
 				
+					<li><a href="./LateNightCaffeinePlayer.html">LateNightCaffeinePlayer</a></li>
+				
+					<li><a href="./LateNightCaffeinePlayer/U.html">LateNightCaffeinePlayer::U</a></li>
+				
+					<li><a href="./LateNightCaffeinePlayer/WordPattern.html">LateNightCaffeinePlayer::WordPattern</a></li>
+				
+					<li><a href="./LukeSquaredAndGeoffPlayer.html">LukeSquaredAndGeoffPlayer</a></li>
+				
+					<li><a href="./LukeSquaredAndGeoffPlayer/WordPattern.html">LukeSquaredAndGeoffPlayer::WordPattern</a></li>
+				
+					<li><a href="./UnicornsAndHipposPlayer.html">UnicornsAndHipposPlayer</a></li>
+				
+					<li><a href="./UnicornsAndHipposPlayer/Dictionary.html">UnicornsAndHipposPlayer::Dictionary</a></li>
+				
 					<li><a href="./ConsoleRenderer.html">ConsoleRenderer</a></li>
 				
 					<li><a href="./ConsoleUserInput.html">ConsoleUserInput</a></li>
@@ -123,7 +137,13 @@
 				
 					<li><a href="./Hangman.html">Hangman</a></li>
 				
+					<li><a href="./HardOfThinkingPlayer.html">HardOfThinkingPlayer</a></li>
+				
 					<li><a href="./HumanDemoPlayer.html">HumanDemoPlayer</a></li>
+				
+					<li><a href="./KyanTriceratopsPlayer.html">KyanTriceratopsPlayer</a></li>
+				
+					<li><a href="./MarkEmblingPlayer.html">MarkEmblingPlayer</a></li>
 				
 					<li><a href="./PhraseGenerator.html">PhraseGenerator</a></li>
 				
@@ -134,6 +154,12 @@
 					<li><a href="./String.html">String</a></li>
 				
 					<li><a href="./StupidDemoPlayer.html">StupidDemoPlayer</a></li>
+				
+					<li><a href="./TeamVelociraptorPlayer.html">TeamVelociraptorPlayer</a></li>
+				
+					<li><a href="./ThreeDayMonkFuzzyPlayer.html">ThreeDayMonkFuzzyPlayer</a></li>
+				
+					<li><a href="./ThreeDayMonkPlayer.html">ThreeDayMonkPlayer</a></li>
 				
 				</ul>
 				<div id="no-class-search-results" style="display: none;">No matching classes.</div>
@@ -328,8 +354,8 @@ next time round)
 24:     <span class="ruby-keyword kw">elsif</span> <span class="ruby-identifier">guess</span>.<span class="ruby-identifier">empty?</span>
 25:       <span class="ruby-ivar">@incorrect_guesses</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-value str">&quot;[empty]&quot;</span>
 26:     <span class="ruby-keyword kw">else</span>
-27:       <span class="ruby-identifier">guess</span> = <span class="ruby-identifier">guess</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/ /</span>, <span class="ruby-value str">&quot;/&quot;</span>)
-28:       
+27:       <span class="ruby-identifier">guess</span> = <span class="ruby-identifier">guess</span>.<span class="ruby-identifier">downcase</span>.<span class="ruby-identifier">strip</span>.<span class="ruby-identifier">gsub</span>(<span class="ruby-regexp re">/ /</span>, <span class="ruby-value str">&quot;/&quot;</span>)
+28: 
 29:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">guess</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&gt;</span> <span class="ruby-value">1</span> <span class="ruby-operator">&amp;&amp;</span> <span class="ruby-identifier">guess</span>.<span class="ruby-identifier">size</span> <span class="ruby-operator">&lt;</span> <span class="ruby-identifier">phrase</span>.<span class="ruby-identifier">size</span>
 30:         <span class="ruby-comment cmt"># This is a word guess, do not allow part of a word guesses</span>
 31:         <span class="ruby-identifier">words</span> = <span class="ruby-identifier">phrase</span>.<span class="ruby-identifier">split</span>(<span class="ruby-value str">&quot;/&quot;</span>)
@@ -342,7 +368,7 @@ next time round)
 38:       
 39:       <span class="ruby-identifier">matches</span> = <span class="ruby-identifier">phrase</span>.<span class="ruby-identifier">all_indices</span>(<span class="ruby-identifier">guess</span>)
 40:     
-41:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">empty?</span>
+41:       <span class="ruby-keyword kw">if</span> <span class="ruby-identifier">matches</span>.<span class="ruby-identifier">empty?</span> <span class="ruby-operator">||</span> <span class="ruby-ivar">@correct_guesses</span>.<span class="ruby-identifier">index</span>(<span class="ruby-identifier">guess</span>) <span class="ruby-operator">!=</span> <span class="ruby-keyword kw">nil</span>   <span class="ruby-comment cmt"># No matches or a repeated correct guess</span>
 42:         <span class="ruby-ivar">@incorrect_guesses</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">guess</span>
 43:       <span class="ruby-keyword kw">else</span>
 44:         <span class="ruby-ivar">@correct_guesses</span> <span class="ruby-operator">&lt;&lt;</span> <span class="ruby-identifier">guess</span>

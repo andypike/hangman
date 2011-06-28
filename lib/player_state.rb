@@ -38,7 +38,7 @@ class PlayerState
       
       matches = phrase.all_indices(guess)
     
-      if matches.empty?
+      if matches.empty? || @correct_guesses.index(guess) != nil   # No matches or a repeated correct guess
         @incorrect_guesses << guess
       else
         @correct_guesses << guess

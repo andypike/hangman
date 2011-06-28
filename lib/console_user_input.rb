@@ -7,7 +7,9 @@ class ConsoleUserInput
   
   # Reads a number from the console
   def read_number
-    gets.chomp.to_i
+    input = gets.chomp
+    exit if input == "exit"
+    input.to_i
   end
   
   # Allows the user to select the specified number of players from the list of loaded players

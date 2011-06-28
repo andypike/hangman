@@ -33,9 +33,12 @@ class ConsoleRenderer
     output "Loaded Players"
     output "=============="
     
-    players.each_with_index do |player, x|
-      output "#{x + 1}: #{player.new.name}"
-    end
+    File.open("log.txt", 'a') do |log|
+      players.each_with_index do |player, x|
+        output "#{x + 1}: #{player.new.name}"
+        log.write "#{x + 1}: #{player.new.name}\r"
+      end
+    end 
     output "* No players loaded :o(" if players.empty?
     
     blank_line
