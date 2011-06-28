@@ -117,3 +117,9 @@ This player has no AI, it just allows a human player to enter each guess for it.
 == Good Luck!
 
 You will have about 2 hours to complete your player before the games start. If you have any questions just shout!
+
+== Feedback
+
+I'd love to hear your feedback on the event itself, and also the game code. I'm always looking to improve (even minor things) so feel free to let me know. You can get me on twitter @andypike, or post on Surrey Rubyists Group: http://groups.google.com/group/surrey-rubyists.
+
+Further details of Surrey Rubyists can be found on the website: http://surreyrubyists.tumblr.com/
