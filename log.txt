@@ -283,3 +283,4 @@ Best letters: {"p"=>1}.
 Best letter unique values: [1].
 All the letters remaining have the same weighing. Use the English letter frequencies to select the highest.
 Guessing best letter candidate: p
+1: Andy's Awesome Player2: Another cool Player

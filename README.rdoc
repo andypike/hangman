@@ -1,5 +1,13 @@
 = Surrey Rubyists Coding Competition: Hangman
 
+== Results
+
+The games were played on 28th June 2011. The winner was:
+
+  threedaymonk (normal)
+
+You can see the full results in knockout.xls. The teams had 2 hours to create their player, why not create your own player and see how you stack up!s
+
 == Player Class
 
 All you need to do is create a single file and implement a new hangman player class with the below methods. 
