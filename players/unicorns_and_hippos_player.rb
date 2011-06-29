@@ -18,7 +18,7 @@ class UnicornsAndHipposPlayer
     @dictionary = Dictionary.new(matches.flatten)
 
     guess = @dictionary.next
-    while pattern.include? guess or @guesses.include? guess do
+    while to_match.join.include? guess or @guesses.include? guess do
       guess = @dictionary.next
     end
     @guesses << guess
