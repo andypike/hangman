@@ -82,6 +82,15 @@ describe "Renderer" do
       @renderer.game_frame(@states)
     end
     
+    it "for each player state it should render their name and taunt if present" do
+      @player.class.instance_eval do
+       define_method(:taunt) { "Go on!" }
+      end
+      @renderer.should_receive(:output).with(%{Andy's Awesome Player - "Go on!"})
+      
+      @renderer.game_frame(@states)
+    end
+    
     it "for each player state it should render the state of their current pattern" do
       @renderer.should_receive(:output).with("___/___/___")
       
