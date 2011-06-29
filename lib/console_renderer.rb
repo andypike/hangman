@@ -62,7 +62,7 @@ class ConsoleRenderer
     clear
     
     states.each do |state|
-      output state.player.name
+      output "%s%s" % [state.player.name, (%{ - "#{state.player.taunt}"} if state.player.respond_to?(:taunt) && state.player.taunt.to_s.length > 0)]
       output state.current_pattern
       output "Correct: #{state.correct_guesses.join(' ')}"
       output "Incorrect: #{state.incorrect_guesses.join(' ')}"
